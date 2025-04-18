@@ -5,16 +5,26 @@ export default function Home() {
     <div className="flex h-screen">
       {/* Sidebar */}
       <aside className="sidebar hidden sm:block">
-        <ul className="space-y-4">
+        <ul className="sidebaralign">
           <Image
-            className="dark"
             src="/iconeTarrafa.svg"
             alt="Tarrafa logomark"
-            width={189.46}
-            height={61.69}
+            width={200}
+            height={60}
           />
-
-          <li className="hover:text-gray-300 cursor-pointer">MENU</li>
+          <ul className="sidebaralign space-y-4">
+            <li className="">MENU</li>
+            <div className="sidebarpainel space-x-4">
+              <Image
+                className="ml-4"
+                src="/sidebarpainelcurso.png"
+                alt="Painel dos Cursos"
+                width={20}
+                height={20}
+              />
+              <li >Painel dos Cursos</li>
+            </div>
+          </ul>
         </ul>
       </aside>
 
