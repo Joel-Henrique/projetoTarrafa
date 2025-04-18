@@ -8,19 +8,34 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-geist-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #000000;
   }
+}
+
+:root {
+  font-family: var(--font-poppins), sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout-home {
+  @apply grid grid-rows-[20px_1fr_20px] place-items-center min-h-screen gap-16 p-8 pb-20 sm:p-20 font-[var(--font-poppins)];
+}
+
+.sidebar {
+  background-color: #F1F2F7;
+  font-size: 11;
+  color: #08243180;
+  padding: 1rem;
+  width: 240px;
 }
