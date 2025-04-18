@@ -10,10 +10,12 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-
 export const metadata: Metadata = {
   title: "Projeto Tarrafa",
   description: "Aplicação usando Next.js",
+  icons: {
+    icon: "/favicon.png", 
+  },
 };
 
 export default function RootLayout({

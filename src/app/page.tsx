@@ -29,7 +29,7 @@ export default function Home() {
                 width={20}
                 height={20}
               />
-              <li >Painel dos Cursos</li>
+              <li>Painel dos Cursos</li>
             </div>
           </ul>
         </ul>
