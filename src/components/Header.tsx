@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 interface Curso {
   id: string;
   nome: string;
+  data: string;
 }
 
 interface HeaderProps {
@@ -46,7 +47,7 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
           </option>
           {cursos.map((curso) => (
             <option key={curso.id} value={curso.id}>
-              {curso.nome}
+              {curso.id}-{curso.data}-A
             </option>
           ))}
         </select>
