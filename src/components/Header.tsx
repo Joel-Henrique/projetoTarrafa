@@ -28,7 +28,7 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
 
   return (
     <header className="header">
-      <div className="space-x-2">
+      <div className="componentsheader space-x-2">
         <Link href="/" className={getLinkClass('/')}>Home</Link>
         <Link href="/Curso" className={getLinkClass('/Curso')}>Curso</Link>
         <Link href="/Alunos" className={getLinkClass('/Alunos')}>Alunos</Link>

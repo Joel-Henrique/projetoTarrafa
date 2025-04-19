@@ -6,9 +6,9 @@ import { useState } from 'react';
 
 
 const cursosMock = [
-  { id: 'ads', nome: 'Análise e Desenvolvimento de Sistemas' },
-  { id: 'si', nome: 'Sistemas de Informação' },
-  { id: 'cc', nome: 'Ciência da Computação' },
+  { id: 'EXT099', nome: 'Análise e Desenvolvimento de Sistemas', data:'2024.3' },
+  { id: 'DCC001', nome: 'Indrodução a Sistemas de Informação', data:'2023.1' },
+  { id: 'DCC023', nome: 'Indrodução a Ciência da Computação', data:'2025.2' },
 ];
 
 export default function HomeLayout() {
@@ -20,7 +20,7 @@ export default function HomeLayout() {
       <div className="flex flex-col flex-1">
         <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
         <main className="flex flex-col items-center sm:items-start p-8 gap-8">
-          <Curso cursoSelecionado={cursoSelecionado} />
+          <Curso cursos={cursosMock} cursoSelecionado={cursoSelecionado} />
         </main>
       </div>
     </div>
