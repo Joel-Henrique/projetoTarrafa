@@ -5,18 +5,19 @@ import Sidebar from '@/components/Sidebar';
 import Home from '@/components/Home';
 
 const cursosMock = [
-  { id: 'ads', nome: 'Análise e Desenvolvimento de Sistemas' },
-  { id: 'si', nome: 'Sistemas de Informação' },
-  { id: 'cc', nome: 'Ciência da Computação' },
+  { id: 'EXT099', nome: 'Análise e Desenvolvimento de Sistemas', data:'2024.3' },
+  { id: 'DCC001', nome: 'Introdução a Sistemas de Informação', data:'2023.1' },
+  { id: 'DCC023', nome: 'Introdução a Ciência da Computação', data:'2025.2' },
 ];
+
 
 export default function HomeLayout() {
   const [cursoSelecionado, setCursoSelecionado] = useState<string | null>(null);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex">
       <Sidebar />
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 pl-[240px] min-h-screen">
         <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
         <main className="flex flex-col items-center sm:items-start p-8 gap-8">
           <Home cursoSelecionado={cursoSelecionado} />

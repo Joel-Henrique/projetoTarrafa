@@ -15,9 +15,9 @@ export default function HomeLayout() {
   const [cursoSelecionado, setCursoSelecionado] = useState<string | null>(null);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex">
       <Sidebar />
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 pl-[240px] min-h-screen">
         <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
         <main className="flex flex-col items-center sm:items-start p-8 gap-8">
           <Curso cursos={cursosMock} cursoSelecionado={cursoSelecionado} />
