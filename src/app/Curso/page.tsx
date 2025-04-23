@@ -1,7 +1,7 @@
 'use client'; 
-import Curso from '@/components/Curso/Curso';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
+import Curso from '@/components/Paginas/Curso/Curso';
+import Header from '@/components/Sidebar/Header/Header';
+import Sidebar from '@/components/Sidebar/Header/Sidebar';
 import { useState } from 'react';
 
 

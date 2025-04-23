@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import Home from '@/components/Home';
+import Header from '@/components/Sidebar/Header/Header';
+import Sidebar from '@/components/Sidebar/Header/Sidebar';
+import Home from '@/components/Paginas/Homepage/Home';
 
 const cursosMock = [
   { id: 'EXT099', nome: 'Análise e Desenvolvimento de Sistemas', data:'2024.3' },
