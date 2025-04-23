@@ -22,7 +22,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins);
-  overflow-x: hidden;
 }
 
 .header {
@@ -85,6 +84,13 @@ body {
   justify-content: space-between;
   width: 1080px;
 }
+.Boxcursopequeno{
+  flex-direction: row;
+  display: flex;  
+  justify-content: space-between;
+  width: 530px;
+}
+
 .Box{
   height: 600px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 

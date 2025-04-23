@@ -22,10 +22,19 @@
     justify-content: center;
 }
 
-
 .BoxCentralizarIndicadores {
     flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.textoPersonalizado{
+    font-size: 16px;
+    color: #374DAA;
+    font-weight: 600;
+}
+.textoPersonalizado2{
+    font-size: 16px;
+    
 }

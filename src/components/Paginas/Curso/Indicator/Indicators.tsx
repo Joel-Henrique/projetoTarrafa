@@ -37,7 +37,7 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
         <div className={styles.EspacarIndicadores}>
           <div className="quadrado bg-[#DCFCE7]">
             <div className="flex flex-col w-full justify-between ">
-              <div className="ml-8 flex justify-start space-x-3">
+              <div className="ml-5 flex justify-start space-x-3">
                 <div className="bg-[#3CD856] rounded-full flex items-center justify-center w-8 h-8">
                   <Image
                     src={alunoIcon1}
@@ -49,14 +49,12 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
                 </div>
                 <p className="text-2xl font-bold text-gray-900">70%</p>
               </div>
-
-              <div className="flex justify-center">
-                <div className="flex flex-col leading-snug items-center">
-                  <p className="text-sm text-gray-700">de alunos</p>
-                  <p className="text-xs text-[#374DAA] font-semibold">engajados</p>
+              <div className="ml-17 mb-3 flex text-left">
+                <div className="flex flex-col leading-snug">
+                  <p className={styles.textoPersonalizado2}>de alunos</p>
+                  <p className={styles.textoPersonalizado}>engajados</p>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -77,15 +75,15 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
 
               <div className="ml-17 flex text-left">
                 <div className="flex flex-col leading-snug">
-                  <p className="text-sm text-gray-700">de alunos</p>
-                  <p className="text-xs text-[#374DAA] font-semibold">com bom desempenho</p>
+                  <p className={styles.textoPersonalizado2}>de alunos</p>
+                  <p className={styles.textoPersonalizado}>com bom desempenho</p>
                 </div>
               </div>
             </div>
           </div>
 
-          
-          
+
+
           <div className="quadrado bg-[#C3D8FF]">
             <div className="flex flex-col w-full justify-between ">
               <div className="ml-8 flex justify-start space-x-3">
@@ -103,8 +101,8 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
 
               <div className="ml-19 flex text-left">
                 <div className="flex flex-col leading-snug">
-                  <p className="text-sm text-gray-700">de alunos</p>
-                  <p className="text-xs text-[#374DAA] font-semibold">com motivação boa</p>
+                  <p className={styles.textoPersonalizado2}>de alunos</p>
+                  <p className={styles.textoPersonalizado}>com motivação boa</p>
                 </div>
               </div>
             </div>
@@ -115,11 +113,11 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
               <div className="ml-5 flex justify-start space-x-3">
                 <div className="bg-[#5C3CD8] rounded-full flex items-center justify-center w-8 h-8">
                   <Image
-                    src={alunoIcon2}
+                    src={alunoIcon}
                     alt="Ícone aluno-professor"
                     width={21}
                     height={28}
-                    className="object-cover"
+                    className="mr-0.5 object-cover"
                   />
                 </div>
                 <p className="text-2xl font-bold text-gray-900">16%</p>
@@ -127,8 +125,8 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
 
               <div className="ml-17 flex text-left">
                 <div className="flex flex-col leading-snug">
-                  <p className="text-sm text-gray-700">de alunos</p>
-                  <p className="text-xs text-[#374DAA] font-semibold">com boa relação<br />aluno-professor</p>
+                  <p className={styles.textoPersonalizado2}>de alunos</p>
+                  <p className={styles.textoPersonalizado}>com boa relação<br />aluno-professor</p>
                 </div>
               </div>
             </div>
@@ -143,48 +141,47 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
           </div>
           <div className={styles.BoxGrupodeRiscoIndicadores}>
             <div className={styles.EspacarIndicadores}>
-              
-            <div className="quadrado bg-[#FFD3A6]">
-            <div className="flex flex-col w-full justify-between ">
-              <div className="ml-3 flex justify-start space-x-3">
-              <div className="bg-[#D86D3C] rounded-full flex items-center justify-center w-8 h-8">
-                    <FontAwesomeIcon icon={faTriangleExclamation} className="mb-1 mr-0.3 text-white text-xl" />
-              </div>
-                <p className="text-2xl font-bold text-gray-900">3%</p>
-              </div>
+              <div className="quadrado bg-[#FFD3A6]">
+                <div className="flex flex-col w-full justify-between ">
+                  <div className="ml-3 flex justify-start space-x-3">
+                    <div className="bg-[#D86D3C] rounded-full flex items-center justify-center w-8 h-8">
+                      <FontAwesomeIcon icon={faTriangleExclamation} className="mb-1 mr-0.3 text-white text-xl" />
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">3%</p>
+                  </div>
 
-              <div className="ml-15 flex text-left">
-                <div className="flex flex-col leading-snug">
-                  <p className="text-sm text-gray-700">de alunos</p>
-                  <p className="text-xs text-[#374DAA] font-semibold"> que precisam de reforço</p>
+                  <div className="ml-15 flex text-left">
+                    <div className="flex flex-col leading-snug">
+                      <p className={styles.textoPersonalizado2}>de alunos</p>
+                      <p className={styles.textoPersonalizado}> que precisam de reforço</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div className="quadrado bg-[#FFD8E2]">
-            <div className="flex flex-col w-full justify-between ">
-              <div className="ml-5 flex justify-start space-x-3">
-                <div className="bg-[#D83C8C] rounded-full flex items-center justify-center w-8 h-8">
-                  <Image
-                    src={alunoIcon5}
-                    alt="Ícone aluno-professor"
-                    width={21}
-                    height={28}
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-2xl font-bold text-gray-900">1%</p>
-              </div>
+              <div className="quadrado bg-[#FFD8E2]">
+                <div className="flex flex-col w-full justify-between ">
+                  <div className="ml-5 flex justify-start space-x-3">
+                    <div className="bg-[#D83C8C] rounded-full flex items-center justify-center w-8 h-8">
+                      <Image
+                        src={alunoIcon5}
+                        alt="Ícone aluno-professor"
+                        width={21}
+                        height={28}
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="text-2xl font-bold text-gray-900">1%</p>
+                  </div>
 
-              <div className="ml-17 flex text-left">
-                <div className="flex flex-col leading-snug">
-                  <p className="text-sm text-gray-700">de alunos</p>
-                  <p className="text-xs text-[#374DAA] font-semibold">em risco de evasão</p>
+                  <div className="ml-17 flex text-left">
+                    <div className="flex flex-col leading-snug">
+                      <p className={styles.textoPersonalizado2}>de alunos</p>
+                      <p className={styles.textoPersonalizado}>em risco de evasão</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
             </div>
           </div>
         </div>
