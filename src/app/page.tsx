@@ -16,8 +16,8 @@ export default function HomeLayout() {
 
   return (
     <div className="flex">
-      <Sidebar />
-      <div className="flex flex-col flex-1 pl-[240px] min-h-screen">
+      <Sidebar/>
+      <div>
         <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
         <main className="flex flex-col items-center sm:items-start p-8 gap-8">
           <Home cursoSelecionado={cursoSelecionado} />
