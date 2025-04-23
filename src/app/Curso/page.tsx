@@ -1,5 +1,5 @@
 'use client'; 
-import Curso from '@/components/Curso';
+import Curso from '@/components/Curso/Curso';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import { useState } from 'react';
@@ -16,13 +16,15 @@ export default function HomeLayout() {
 
   return (
     <div className="flex">
-      <Sidebar />
-      <div className="flex flex-col flex-1 pl-[240px] min-h-screen">
-        <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
-        <main className="flex flex-col items-center sm:items-start p-8 gap-8">
-          <Curso cursos={cursosMock} cursoSelecionado={cursoSelecionado} />
-        </main>
-      </div>
-    </div>
+  <Sidebar />
+  <div className="flex-1">
+    <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
+    
+    <main>
+      <Curso cursos={cursosMock} cursoSelecionado={cursoSelecionado} />
+    </main>
+  </div>
+</div>
+
   );
 }

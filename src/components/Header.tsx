@@ -19,7 +19,7 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
 
   const getLinkClass = (path: string) => {
     return pathname === path
-      ? 'px-4 py-2 rounded bg-[#707FDD] text-white hover:bg-[#5a6acf] transition'
+      ? 'px-4 py-2 rounded bg-[#707FDD] text-white hover:bg-[#374DAA] transition'
       : 'px-4 py-2 rounded text-gray-700 hover:bg-gray-100 transition';
   };
 
