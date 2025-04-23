@@ -23,7 +23,7 @@ export default function CompDemograf({ cursoSelecionado }: IndicatorsProps) {
             <div className={styles.BoxCentralizarIndicadores}>
                 <div className={styles.EspacarIndicadores}>
                     <div style={{ backgroundColor: '#6463D633' }} className={styles.quadrado}>
-                        <div className="ml-10">
+                        <div className="ml-4">
                             <div className="flex items-center space-x-2 mb-4">
                                 <span className="text-lg">
                                     <Image
