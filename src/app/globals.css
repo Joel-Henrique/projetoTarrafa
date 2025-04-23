@@ -107,13 +107,11 @@ body {
 .quadrado {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  flex-direction: row;
   border-radius: 10px;
   width: 250px;
   height: 150px;
   margin: 10px;
-  padding-left: 12px; 
-  padding-right: 12px;
 }
 
 .BoxCurso{

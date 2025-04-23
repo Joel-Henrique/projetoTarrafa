@@ -14,7 +14,7 @@ interface IndicatorsProps {
 
 export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
   return (
-    
+
     <div className="Box my-10">
       <div className="maincurso">
         <div className="mt-10 ml-10 mb-5">
@@ -35,86 +35,101 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
 
       <div className={styles.BoxCentralizarIndicadores}>
         <div className={styles.EspacarIndicadores}>
-          <div className="quadrado bg-[#DCFCE7]" >
-            <div className="flex items-center space-x-3">
-              <div className="bg-[#3CD856] rounded-full flex items-center justify-center w-14 h-14">
-                <Image
-                  src={alunoIcon1}
-                  alt="Ícone aluno-professor"
-                  width={30}
-                  height={40}
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col leading-snug">
+          <div className="quadrado bg-[#DCFCE7]">
+            <div className="flex flex-col w-full justify-between ">
+              <div className="ml-8 flex justify-start space-x-3">
+                <div className="bg-[#3CD856] rounded-full flex items-center justify-center w-8 h-8">
+                  <Image
+                    src={alunoIcon1}
+                    alt="Ícone aluno-professor"
+                    width={15}
+                    height={20}
+                    className="object-cover"
+                  />
+                </div>
                 <p className="text-2xl font-bold text-gray-900">70%</p>
-                <p className="text-sm text-gray-700">de alunos</p>
-                <p className="text-xs text-[#374DAA] font-semibold">
-                  engajados
-                </p>
               </div>
+
+              <div className="flex justify-center">
+                <div className="flex flex-col leading-snug items-center">
+                  <p className="text-sm text-gray-700">de alunos</p>
+                  <p className="text-xs text-[#374DAA] font-semibold">engajados</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <div className="quadrado bg-[#FFF5A6]" >
-            <div className="flex items-center space-x-3">
-              <div className="bg-[#D8D03C] rounded-full flex items-center justify-center w-16 h-14">
-                <Image
-                  src={alunoIcon2}
-                  alt="Ícone aluno-professor"
-                  width={40}
-                  height={40}
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col leading-snug">
+          <div className="quadrado bg-[#FFF5A6]">
+            <div className="flex flex-col w-full justify-between ">
+              <div className="ml-5 flex justify-start space-x-3">
+                <div className="bg-[#D8D03C] rounded-full flex items-center justify-center w-8 h-8">
+                  <Image
+                    src={alunoIcon2}
+                    alt="Ícone aluno-professor"
+                    width={21}
+                    height={28}
+                    className="object-cover"
+                  />
+                </div>
                 <p className="text-2xl font-bold text-gray-900">55%</p>
-                <p className="text-sm text-gray-700">de alunos</p>
-                <p className="text-xs text-[#374DAA] font-semibold">
-                  com bom desempenho
-                </p>
+              </div>
+
+              <div className="ml-17 flex text-left">
+                <div className="flex flex-col leading-snug">
+                  <p className="text-sm text-gray-700">de alunos</p>
+                  <p className="text-xs text-[#374DAA] font-semibold">com bom desempenho</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="quadrado bg-[#C3D8FF]" >
-            <div className="flex items-center space-x-3">
-              <div className="bg-[#3C56D8] rounded-full flex items-center justify-center w-14 h-14">
-                <Image
-                  src={alunoIcon3}
-                  alt="Ícone aluno-professor"
-                  width={40}
-                  height={40}
-                  className="ml-4 object-cover"
-                />
-              </div>
-              <div className="flex flex-col leading-snug">
+          
+          
+          <div className="quadrado bg-[#C3D8FF]">
+            <div className="flex flex-col w-full justify-between ">
+              <div className="ml-8 flex justify-start space-x-3">
+                <div className="bg-[#3C56D8] rounded-full flex items-center justify-center w-8 h-8">
+                  <Image
+                    src={alunoIcon3}
+                    alt="Ícone aluno-professor"
+                    width={21}
+                    height={28}
+                    className="ml-2.5 object-cover"
+                  />
+                </div>
                 <p className="text-2xl font-bold text-gray-900">55%</p>
-                <p className="text-sm text-gray-700">de alunos</p>
-                <p className="text-xs text-[#374DAA] font-semibold">
-                  com motivação boa
-                </p>
+              </div>
+
+              <div className="ml-19 flex text-left">
+                <div className="flex flex-col leading-snug">
+                  <p className="text-sm text-gray-700">de alunos</p>
+                  <p className="text-xs text-[#374DAA] font-semibold">com motivação boa</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="quadrado bg-[#D0C3FF]" >
-            <div className="flex items-center space-x-3">
-              <div className="bg-[#5C3CD8] rounded-full flex items-center justify-center w-14 h-14">
-                <Image
-                  src={alunoIcon}
-                  alt="Ícone aluno-professor"
-                  width={40}
-                  height={40}
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col leading-snug">
+          <div className="quadrado bg-[#D0C3FF]">
+            <div className="flex flex-col w-full justify-between ">
+              <div className="ml-5 flex justify-start space-x-3">
+                <div className="bg-[#5C3CD8] rounded-full flex items-center justify-center w-8 h-8">
+                  <Image
+                    src={alunoIcon2}
+                    alt="Ícone aluno-professor"
+                    width={21}
+                    height={28}
+                    className="object-cover"
+                  />
+                </div>
                 <p className="text-2xl font-bold text-gray-900">16%</p>
-                <p className="text-sm text-gray-700">de alunos</p>
-                <p className="text-xs text-[#374DAA] font-semibold">
-                  com boa relação<br />aluno-professor
-                </p>
+              </div>
+
+              <div className="ml-17 flex text-left">
+                <div className="flex flex-col leading-snug">
+                  <p className="text-sm text-gray-700">de alunos</p>
+                  <p className="text-xs text-[#374DAA] font-semibold">com boa relação<br />aluno-professor</p>
+                </div>
               </div>
             </div>
           </div>
@@ -128,43 +143,48 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
           </div>
           <div className={styles.BoxGrupodeRiscoIndicadores}>
             <div className={styles.EspacarIndicadores}>
-              <div className="quadrado bg-[#FFD3A6]">
-                <div className="flex items-center space-x-3">
-                  <div className="bg-[#D86D3C] rounded-full flex items-center justify-center w-13 h-13">
-                    <FontAwesomeIcon icon={faTriangleExclamation} className="mb-1 text-white text-4xl" />
-                  </div>
-
-                  <div className="flex flex-col leading-snug">
-                    <p className="text-2xl font-bold text-gray-900">4%</p>
-                    <p className="text-sm text-gray-700">de alunos</p>
-                    <p className="text-xs text-[#374DAA] font-semibold">
-                      que precisam de reforço
-                    </p>
-                  </div>
-                </div>
+              
+            <div className="quadrado bg-[#FFD3A6]">
+            <div className="flex flex-col w-full justify-between ">
+              <div className="ml-3 flex justify-start space-x-3">
+              <div className="bg-[#D86D3C] rounded-full flex items-center justify-center w-8 h-8">
+                    <FontAwesomeIcon icon={faTriangleExclamation} className="mb-1 mr-0.3 text-white text-xl" />
+              </div>
+                <p className="text-2xl font-bold text-gray-900">3%</p>
               </div>
 
-              <div className="quadrado bg-[#FFD8E2]" >
-                <div className="flex items-center space-x-3">
-                  <div className="bg-[#D83C8C] rounded-full flex items-center justify-center w-14 h-14">
-                    <Image
-                      src={alunoIcon5}
-                      alt="Ícone aluno-professor"
-                      width={40}
-                      height={40}
-                      className="object-cover"
-                    />
-                  </div>
-
-                  <div className="flex flex-col leading-snug">
-                    <p className="text-2xl font-bold text-gray-900">3%</p>
-                    <p className="text-sm text-gray-700">de alunos</p>
-                    <p className="text-xs text-[#374DAA] font-semibold">
-                      em risco de evasão
-                    </p>
-                  </div>
+              <div className="ml-15 flex text-left">
+                <div className="flex flex-col leading-snug">
+                  <p className="text-sm text-gray-700">de alunos</p>
+                  <p className="text-xs text-[#374DAA] font-semibold"> que precisam de reforço</p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="quadrado bg-[#FFD8E2]">
+            <div className="flex flex-col w-full justify-between ">
+              <div className="ml-5 flex justify-start space-x-3">
+                <div className="bg-[#D83C8C] rounded-full flex items-center justify-center w-8 h-8">
+                  <Image
+                    src={alunoIcon5}
+                    alt="Ícone aluno-professor"
+                    width={21}
+                    height={28}
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-2xl font-bold text-gray-900">1%</p>
+              </div>
+
+              <div className="ml-17 flex text-left">
+                <div className="flex flex-col leading-snug">
+                  <p className="text-sm text-gray-700">de alunos</p>
+                  <p className="text-xs text-[#374DAA] font-semibold">em risco de evasão</p>
+                </div>
+              </div>
+            </div>
+          </div>
             </div>
           </div>
         </div>
