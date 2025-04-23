@@ -86,12 +86,18 @@ body {
   width: 1080px;
 }
 .Box{
-
   height: 600px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 
   0 1px 2px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
 }
+.Box2{
+  height: 400px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 
+  0 1px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+}
+
 .center-wrapper {
   display: flex;
   align-items: center;     

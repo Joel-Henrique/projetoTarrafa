@@ -14,9 +14,10 @@ interface IndicatorsProps {
 
 export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
   return (
+    
     <div className="Box my-10">
       <div className="maincurso">
-        <div className="m-10">
+        <div className="mt-10 ml-10 mb-5">
           <h1 className="text-xl font-poppins font-semibold text-left">Indicadores</h1>
           <p style={{ color: "#9291A5" }}>Calculados</p>
         </div>
@@ -37,14 +38,14 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
           <div className="quadrado bg-[#DCFCE7]" >
             <div className="flex items-center space-x-3">
               <div className="bg-[#3CD856] rounded-full flex items-center justify-center w-14 h-14">
-                    <Image
-                      src={alunoIcon1}
-                      alt="Ícone aluno-professor"
-                      width={30}  
-                      height={40} 
-                      className="object-cover" 
-                    />
-                  </div>
+                <Image
+                  src={alunoIcon1}
+                  alt="Ícone aluno-professor"
+                  width={30}
+                  height={40}
+                  className="object-cover"
+                />
+              </div>
               <div className="flex flex-col leading-snug">
                 <p className="text-2xl font-bold text-gray-900">70%</p>
                 <p className="text-sm text-gray-700">de alunos</p>
@@ -54,17 +55,18 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
               </div>
             </div>
           </div>
+
           <div className="quadrado bg-[#FFF5A6]" >
             <div className="flex items-center space-x-3">
               <div className="bg-[#D8D03C] rounded-full flex items-center justify-center w-16 h-14">
-                    <Image
-                      src={alunoIcon2}
-                      alt="Ícone aluno-professor"
-                      width={40}  
-                      height={40} 
-                      className="object-cover" 
-                    />
-                  </div>
+                <Image
+                  src={alunoIcon2}
+                  alt="Ícone aluno-professor"
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
+              </div>
               <div className="flex flex-col leading-snug">
                 <p className="text-2xl font-bold text-gray-900">55%</p>
                 <p className="text-sm text-gray-700">de alunos</p>
@@ -78,14 +80,14 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
           <div className="quadrado bg-[#C3D8FF]" >
             <div className="flex items-center space-x-3">
               <div className="bg-[#3C56D8] rounded-full flex items-center justify-center w-14 h-14">
-                    <Image
-                      src={alunoIcon3}
-                      alt="Ícone aluno-professor"
-                      width={40}  
-                      height={40} 
-                      className="ml-4 object-cover"
-                    />
-                  </div>
+                <Image
+                  src={alunoIcon3}
+                  alt="Ícone aluno-professor"
+                  width={40}
+                  height={40}
+                  className="ml-4 object-cover"
+                />
+              </div>
               <div className="flex flex-col leading-snug">
                 <p className="text-2xl font-bold text-gray-900">55%</p>
                 <p className="text-sm text-gray-700">de alunos</p>
@@ -99,14 +101,14 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
           <div className="quadrado bg-[#D0C3FF]" >
             <div className="flex items-center space-x-3">
               <div className="bg-[#5C3CD8] rounded-full flex items-center justify-center w-14 h-14">
-                    <Image
-                      src={alunoIcon}
-                      alt="Ícone aluno-professor"
-                      width={40}  
-                      height={40} 
-                      className="object-cover" 
-                    />
-                  </div>
+                <Image
+                  src={alunoIcon}
+                  alt="Ícone aluno-professor"
+                  width={40}
+                  height={40}
+                  className="object-cover"
+                />
+              </div>
               <div className="flex flex-col leading-snug">
                 <p className="text-2xl font-bold text-gray-900">16%</p>
                 <p className="text-sm text-gray-700">de alunos</p>
@@ -142,16 +144,15 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
                 </div>
               </div>
 
-
               <div className="quadrado bg-[#FFD8E2]" >
                 <div className="flex items-center space-x-3">
                   <div className="bg-[#D83C8C] rounded-full flex items-center justify-center w-14 h-14">
                     <Image
                       src={alunoIcon5}
                       alt="Ícone aluno-professor"
-                      width={40}  
-                      height={40} 
-                      className="object-cover" 
+                      width={40}
+                      height={40}
+                      className="object-cover"
                     />
                   </div>
 
@@ -164,10 +165,8 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
