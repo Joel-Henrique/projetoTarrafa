@@ -14,15 +14,16 @@ const cursosMock = [
 export default function HomeLayout() {
   const [cursoSelecionado, setCursoSelecionado] = useState<string | null>(null);
 
-  return (
-    <div className="flex">
-      <Sidebar/>
-      <div>
-        <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
-        <main className="flex flex-col items-center sm:items-start p-8 gap-8">
-          <Home cursoSelecionado={cursoSelecionado} />
-        </main>
-      </div>
-    </div>
-  );
+   return (
+     <div className="flex">
+   <Sidebar />
+   <div className="flex-1">
+     <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
+     <main>
+       <Home cursos={cursosMock} cursoSelecionado={cursoSelecionado} />
+     </main>
+   </div>
+ </div>
+ 
+   );
 }
