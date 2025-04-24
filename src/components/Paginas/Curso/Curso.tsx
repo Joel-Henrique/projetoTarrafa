@@ -3,6 +3,8 @@ import Indicators from './Indicator/Indicators';
 import CompDemo from './CompDemo/CompDemograf';
 import Grafico from './Grafico/Atividades';
 import NumAbso from './NumAbso/NumAbso';
+import Ranking_Melhor_Desempenho from './Ranking_Melhor_Desempenho/Ranking_Melhor_Desempenho';
+import Ranking_Mais_Dificuldade from './Ranking_Mais_Dificuldade/Ranking_Mais_Dificuldade';
 type CursoType = {
   id: string;
   nome: string;
@@ -50,6 +52,10 @@ export default function Curso({ cursos, cursoSelecionado }: CursoProps) {
               <div className="flex flex-row space-x-5">
                 <Grafico cursoSelecionado={cursoSelecionado} />
                 <NumAbso cursoSelecionado={cursoSelecionado} />
+              </div>
+              <div className="flex flex-row space-x-5">
+                <Ranking_Melhor_Desempenho cursoSelecionado={cursoSelecionado} />
+                <Ranking_Mais_Dificuldade cursoSelecionado={cursoSelecionado} />
               </div>
             </div>
           ) : (
