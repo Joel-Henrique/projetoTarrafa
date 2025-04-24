@@ -31,16 +31,15 @@ const GraficoComp: React.FC<GraficoNivoProps> = ({ legenda }) => {
         padAngle={0}
         cornerRadius={0}
         enableArcLabels={true}
+        sortByValue={true}
         arcLabelsSkipAngle={10}
         arcLabelsTextColor="#ffffff"
         arcLabel={(d) => `${((d.value / total) * 100).toFixed(0)}%`}
         colors={legenda.map(item => item.color)}
         borderWidth={1}
         borderColor={{ from: 'color', modifiers: [['darker', 0]] }}
-        arcLinkLabelsSkipAngle={0}
-        arcLinkLabelsTextColor="#ffffff"
-        arcLinkLabelsThickness={0}
-        arcLinkLabelsColor={{ from: 'color' }}
+        enableArcLinkLabels={false}
+        
         theme={{
           labels: {
             text: {

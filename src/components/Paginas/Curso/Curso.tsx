@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Indicators from './Indicator/Indicators';
 import CompDemo from './CompDemo/CompDemograf';
-import Grafico from './Grafico/Grafico';
+import Grafico from './Grafico/Atividades';
 import NumAbso from './NumAbso/NumAbso';
 type CursoType = {
   id: string;
