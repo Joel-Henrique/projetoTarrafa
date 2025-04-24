@@ -3,6 +3,9 @@ import Indicators from './Indicator/Indicators';
 import CompDemo from './CompDemo/CompDemograf';
 import Ranking_Melhor_Desempenhos from './Ranking_Melhor_Desempenhos/Ranking_Melhor_Desempenhos';
 import Ranking_Piores_Desempenhos from './Ranking_Piores_Desempenhos/Ranking_Piores_Desempenhos';
+import DadosGerais from './DadosGerais/DadosGerais';
+import HorarioPico from './HorarioPico/HorarioPico';
+import Formacao from './Formacao/formacao';
 type CursoType = {
   id: string;
   nome: string;
@@ -51,7 +54,14 @@ export default function Home({ cursos, cursoSelecionado }: CursoProps) {
                 <Ranking_Melhor_Desempenhos cursoSelecionado={cursoSelecionado} />
                 <Ranking_Piores_Desempenhos cursoSelecionado={cursoSelecionado} />
               </div>
+              <HorarioPico cursoSelecionado={cursoSelecionado} />
+              <DadosGerais cursoSelecionado={cursoSelecionado} />
+              <div className="flex flex-row space-x-5">
+                <Formacao cursoSelecionado={cursoSelecionado} />
+                
+              </div>
             </div>
+
           ) : (
             <p></p>
           )}
