@@ -36,7 +36,7 @@ const Grafico = () => (
       
       valueScale={{ type: 'linear' }}
       indexScale={{ type: 'band', round: true }}
-      colors="#374DAA"
+      colors="#4C6CA8"
       borderRadius={6}
       enableGridY={true}
       isInteractive={true} //tooltip
