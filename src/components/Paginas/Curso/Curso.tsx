@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link'
 import Indicators from './Indicator/Indicators';
 import CompDemo from './CompDemo/CompDemograf';
