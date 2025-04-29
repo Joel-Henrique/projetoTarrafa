@@ -20,7 +20,7 @@ export default function HomeLayout() {
    <div className="flex-1">
      <Header cursos={cursosMock} onCursoChange={setCursoSelecionado} />
      <main>
-       <Home cursos={cursosMock} cursoSelecionado={cursoSelecionado} />
+       <Home/>
      </main>
    </div>
  </div>

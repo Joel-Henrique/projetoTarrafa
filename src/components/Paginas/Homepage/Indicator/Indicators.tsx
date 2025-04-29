@@ -8,11 +8,9 @@ import alunoIcon5 from './evasion.png';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
-interface IndicatorsProps {
-  cursoSelecionado: string | null;
-}
 
-export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
+
+export default function Indicators() {
   return (
 
     <div className="Box my-10">

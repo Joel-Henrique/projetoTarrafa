@@ -4,11 +4,9 @@ import faixaetaria from './faixaetaria.png';
 import gender from './gender.png';
 import styles from './Indicators.module.css';
 
-interface IndicatorsProps {
-    cursoSelecionado: string | null;
-}
 
-export default function CompDemograf({ cursoSelecionado }: IndicatorsProps) {
+
+export default function CompDemograf() {
     return (
         <div className="Box2 my-10">
             <div className="maincurso">

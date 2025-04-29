@@ -1,8 +1,5 @@
-interface DadosGeraisProps {
-    cursoSelecionado: string | null;
-  }
-  
-  export default function DadosGerais({ cursoSelecionado }: DadosGeraisProps) {
+
+  export default function DadosGerais() {
     return (
       <div className="Box2 my-10">
         <div className="mb-22">

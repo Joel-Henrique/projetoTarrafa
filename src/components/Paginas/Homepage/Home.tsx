@@ -6,65 +6,37 @@ import Ranking_Piores_Desempenhos from './Ranking_Piores_Desempenhos/Ranking_Pio
 import DadosGerais from './DadosGerais/DadosGerais';
 import HorarioPico from './HorarioPico/HorarioPico';
 import Formacao from './Formacao/formacao';
-type CursoType = {
-  id: string;
-  nome: string;
-  data: string;
-};
 
-type CursoProps = {
-  cursos: CursoType[];
-  cursoSelecionado: string | null;
-};
-
-export default function Home({ cursos, cursoSelecionado }: CursoProps) {
-  const curso = cursos.find(c => c.id === cursoSelecionado);
+export default function Home() {
 
   return (
     <div className="flex-1 flex justify-center items-center pl-[240px]">
       <div className="BoxCurso">
         <div className="flex flex-row justify-between items-start w-full">
           <div className="flex flex-col items-start">
-            <h1 className="text-xl font-poppins font-semibold text-left">Curso</h1>
-            {curso ? (
+            <h1 className="text-xl font-poppins font-semibold text-left">Visão Geral</h1>
+      
               <p style={{ color: '#374DAA' }} className="text-left text-xl font-semibold">
-                {curso.nome}
+              dos cursos
               </p>
-            ) : (
-              <p className="text-left">Nenhum curso foi selecionado ainda.</p>
-            )}
           </div>
-          <div className="flex flex-col items-end">
-            {curso ? (
-              <>
-                <p className="text-sm text-right">{curso.data}</p>
-                <p className="text-xl text-right font-poppins font-semibold">{curso.id}</p>
-              </>
-            ) : (
-              <p></p>
-            )}
-          </div>
+ 
         </div>
         <div>
-          {curso ? (
             <div className="center-wrapper flex flex-col justify-between">
-              <Indicators cursoSelecionado={cursoSelecionado} />
-              <CompDemo cursoSelecionado={cursoSelecionado} />
+              <Indicators  />
+              <CompDemo />
               <div className="flex flex-row space-x-5">
-                <Ranking_Melhor_Desempenhos cursoSelecionado={cursoSelecionado} />
-                <Ranking_Piores_Desempenhos cursoSelecionado={cursoSelecionado} />
+                <Ranking_Melhor_Desempenhos  />
+                <Ranking_Piores_Desempenhos  />
               </div>
-              <HorarioPico cursoSelecionado={cursoSelecionado} />
-              <DadosGerais cursoSelecionado={cursoSelecionado} />
+                <DadosGerais />
               <div className="flex flex-row space-x-5">
-                <Formacao cursoSelecionado={cursoSelecionado} />
+                <Formacao />
                 
               </div>
             </div>
 
-          ) : (
-            <p></p>
-          )}
         </div>
       </div>
     </div>

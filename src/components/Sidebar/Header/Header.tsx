@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 interface Curso {
   id: string;
@@ -15,6 +15,15 @@ interface HeaderProps {
 }
 
 export default function Header({ cursos, onCursoChange }: HeaderProps) {
+
+  const router = useRouter();
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedCursoId = e.target.value;
+    onCursoChange(selectedCursoId);
+    router.push(`/Curso?id=${selectedCursoId}`); // redireciona com query string
+  };
+
   const pathname = usePathname();
 
   const getLinkClass = (path: string) => {
@@ -23,9 +32,6 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
       : 'px-4 py-2 rounded text-gray-700 hover:bg-gray-100 transition';
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    onCursoChange(e.target.value);
-  };
 
   return (
     <header className="header">

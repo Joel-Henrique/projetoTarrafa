@@ -1,8 +1,5 @@
 import GraficoComp from './GraficoComp';
 
-interface GraficoProps {
-    cursoSelecionado: string | null;
-}
 const legenda = [
     { id: 'Dentro do tempo', label: 'Dentro do tempo', value: 80, color: '#DA77C4' },
     { id: 'Atrasado', label: 'Atrasado', value: 15, color: '#4C6CA8' },
@@ -10,7 +7,7 @@ const legenda = [
 
 ];
 
-export default function Grafico({ cursoSelecionado }: GraficoProps) {
+export default function Grafico() {
     return (
         <div className="Box my-10">
             <div className="Boxcursopequeno">

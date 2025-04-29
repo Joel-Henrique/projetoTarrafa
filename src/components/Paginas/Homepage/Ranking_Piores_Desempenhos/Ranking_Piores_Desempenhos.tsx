@@ -1,9 +1,5 @@
 import RenderizaAlunos from './RenderizaAlunos';
 
-interface Ranking_Piores_DesempenhosProps {
-    cursoSelecionado: string | null;
-}
-
 const Curso = [
     { id: '1', label: 'Cálculo III', value: 27 },
     { id: '2', label: 'Equações Diferenciais I', value: 25 },
@@ -17,7 +13,7 @@ const Curso = [
     { id: '10', label: 'Teoria da Computação', value: 38 },
 ];
 
-export default function Ranking_Piores_Desempenhos({ cursoSelecionado }: Ranking_Piores_DesempenhosProps) {
+export default function Ranking_Piores_Desempenhos() {
     return (
         <div className="Box my-10">
             <div className="Boxcursopequeno">

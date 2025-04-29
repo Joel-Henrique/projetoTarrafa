@@ -1,8 +1,6 @@
-interface HorarioPicoProps {
-    cursoSelecionado: string | null;
-}
 
-export default function HorarioPico({ cursoSelecionado }: HorarioPicoProps) {
+
+export default function HorarioPico() {
     return (
         <div className="Box2 my-10">
             <div className="maincurso">
