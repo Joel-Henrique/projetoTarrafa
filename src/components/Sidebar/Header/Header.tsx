@@ -21,7 +21,7 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedCursoId = e.target.value;
     onCursoChange(selectedCursoId);
-    router.push(`/Curso?id=${selectedCursoId}`); // redireciona com query string
+    router.push(`?id=${selectedCursoId}`); // redireciona com query string
   };
 
   const pathname = usePathname();
