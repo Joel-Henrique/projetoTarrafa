@@ -20,7 +20,7 @@ const TableHeader = React.forwardRef<
     HTMLTableSectionElement,
     React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
-    <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
+    <thead ref={ref} className={cn(className)} {...props} />
 ))
 TableHeader.displayName = "TableHeader"
 
@@ -30,26 +30,11 @@ const TableBody = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <tbody
         ref={ref}
-        className={cn("[&_tr:last-child]:border-0 text-center", className)}
+        className={cn("text-center", className)}
         {...props}
     />
 ))
 TableBody.displayName = "TableBody"
-
-const TableFooter = React.forwardRef<
-    HTMLTableSectionElement,
-    React.HTMLAttributes<HTMLTableSectionElement>
->(({ className, ...props }, ref) => (
-    <tfoot
-        ref={ref}
-        className={cn(
-            "border-t bg-zinc-100/50 font-medium [&>tr]:last:border-b-0 dark:bg-zinc-800/50",
-            className
-        )}
-        {...props}
-    />
-))
-TableFooter.displayName = "TableFooter"
 
 const TableRow = React.forwardRef<
     HTMLTableRowElement,
@@ -73,7 +58,7 @@ const TableHead = React.forwardRef<
     <th
         ref={ref}
         className={cn(
-            "text-center h-10 px-2 py-2 align-middle font-medium text-zinc-600 [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+            "text-center h-10 px-2 py-2 align-middle font-medium text-zinc-600",
             className
         )}
         {...props}
@@ -88,7 +73,7 @@ const TableCell = React.forwardRef<
     <td
         ref={ref}
         className={cn(
-            "p-2 py-4 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+            "p-2 py-4 align-middle",
             className
         )}
         {...props}
@@ -100,7 +85,6 @@ export {
     Table,
     TableHeader,
     TableBody,
-    TableFooter,
     TableHead,
     TableRow,
     TableCell,

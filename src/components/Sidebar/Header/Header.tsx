@@ -17,12 +17,15 @@ interface HeaderProps {
 export default function Header({ cursos, onCursoChange }: HeaderProps) {
 
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedCursoId = e.target.value;
     onCursoChange(selectedCursoId);
-    router.push(`?id=${selectedCursoId}`); // redireciona com query string
+    router.push(`?id=${selectedCursoId}`);
   };
+
+  const cursoIdFromUrl = searchParams.get("id") || "";
 
   const pathname = usePathname();
 
@@ -44,7 +47,7 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
           id="curso"
           name="curso"
           className="select-classic"
-          defaultValue=""
+          defaultValue={cursos.find((curso) => curso.id === cursoIdFromUrl)?.id || ''}
           onChange={handleChange}
           required
         >

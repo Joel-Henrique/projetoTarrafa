@@ -1,14 +1,7 @@
-import * as React from "react"
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableHead,
-  TableRow,
-  TableCell,
-} from "../../ui/tabela"
-import { CiSearch } from "react-icons/ci";
+import * as React from "react";
 import Link from "next/link";
+import DataTable from "@/components/template/dataTable";
+import SearchInput from "@/components/template/searchInput";
 
 interface CursoType {
   id: string;
@@ -37,25 +30,84 @@ interface AlunosProps {
 
 function badgeColor(status: string) {
   switch (status) {
+    case "Muito Alto":
+      return "bg-emerald-100 text-emerald-700";
     case "Alto":
-      return "bg-emerald-100 text-emerald-700"
+      return "bg-indigo-100 text-indigo-700";
     case "Médio":
-      return "bg-indigo-100 text-indigo-700"
+      return "bg-yellow-100 text-yellow-700";
     case "Baixo":
-      return "bg-red-100 text-red-700"
+      return "bg-orange-100 text-orange-700";
+    case "Muito Baixo":
+      return "bg-red-100 text-red-700";
     default:
-      return "bg-gray-100 text-gray-600"
+      return "bg-gray-100 text-gray-600";
   }
 }
 
 export default function Alunos({ cursos, alunos, cursoSelecionado }: AlunosProps) {
   const curso = cursos.find(c => c.id === cursoSelecionado);
+  const [searchTerm, setSearchTerm] = React.useState('');
+
+  const columns = [
+    {
+      label: "Aluno",
+      name: "nome",
+      options: {
+        sticky: true,
+        headerClassName: "min-w-96",
+        cellClassName: "font-medium text-left"
+      }
+    },
+    {
+      label: "Taxa de Engajamento",
+      name: "engajamento",
+      cell: (row: AlunoType) => (
+        <div className={`py-1 rounded-md text-xs font-medium border-[1.5px] ${badgeColor(row.engajamento)}`}>
+          {row.engajamento}
+        </div>
+      )
+    },
+    {
+      label: "Nº de Posts em Fóruns Avaliativos",
+      name: "mensagens"
+    },
+    {
+      label: "Percentual de Quizzes Realizados",
+      name: "quizzes"
+    },
+    {
+      label: "Percentual de Tarefas Enviadas",
+      name: "tarefas"
+    },
+    {
+      label: "Nº de Acessos (últimos 7 dias)",
+      name: "acessos"
+    },
+    {
+      label: "Frequência de login",
+      name: "frequencia"
+    },
+    {
+      label: "Tempo médio por sessão",
+      name: "tempoMedio"
+    },
+    {
+      label: "Detalhes",
+      name: "detalhes",
+      cell: (row: AlunoType) => (
+        <Link href={`/detalhes/${row.id}`} className="cursor-pointer flex items-center justify-center w-full">
+          {row.detalhes}
+        </Link>
+      )
+    }
+  ];
 
   return (
     <div className="flex-1 flex justify-center items-center pl-[240px]">
       <div className="BoxCurso">
         {/* Header */}
-        <div className="flex flex-row justify-between items-start w-full mb-8">
+        <div className="flex flex-row justify-between items-start w-full mb-4">
           <div className="flex flex-col items-start">
             <h1 className="text-xl font-poppins font-semibold text-left">Alunos</h1>
             {curso ? (
@@ -79,8 +131,9 @@ export default function Alunos({ cursos, alunos, cursoSelecionado }: AlunosProps
         </div>
         {curso && (
           <div className="flex flex-col gap-4">
+
             {/* Indicadores */}
-            <div className="flex gap-2 mb-3">
+            <div className="flex gap-2 mb-2 justify-between">
               {["Engajamento", "Desempenho", "Motivação", "Relação Aluno-Professor", "Desistência"].map((tab, i) => (
                 <button
                   key={i}
@@ -89,73 +142,21 @@ export default function Alunos({ cursos, alunos, cursoSelecionado }: AlunosProps
                   {tab}
                 </button>
               ))}
+              
               {/*Busca*/}
-              <div className="ml-auto flex items-center gap-2 border-2 rounded-sm border-gray-300 px-4 py-2">
-                <CiSearch className="text-xl" />
-                <input placeholder="Aluno" className="w-48 focus-visible:outline-none" />
-              </div>
+              <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             </div>
 
             {/* Tabela */}
-            <div className="bg-white overflow-y-auto overflow-x-auto max-h-[500px] relative">
-              <Table>
-                <TableHeader className="sticky top-0 z-50">
-                  <TableRow className="bg-gray-100">
-                    <TableHead className="sticky min-w-24 left-0 z-40 bg-gray-100 px-6 font-bold">ID</TableHead>
-                    <TableHead className="sticky left-24 z-40 min-w-96 pl-6 text-left bg-gray-100 font-bold">Aluno</TableHead>
-                    <TableHead className="min-w-40">Taxa de Engajamento</TableHead>
-                    <TableHead className="min-w-40">Nº de Posts em Fóruns Avaliativos</TableHead>
-                    <TableHead className="min-w-40">Percentual de Quizzes Realizados</TableHead>
-                    <TableHead className="min-w-40">Percentual de Tarefas Enviadas</TableHead>
-                    <TableHead className="min-w-40">Nº de Acessos (últimos 7 dias)</TableHead>
-                    <TableHead className="min-w-40">Frequência de login</TableHead>
-                    <TableHead className="min-w-40">Tempo médio por sessão</TableHead>
-                    <TableHead className="min-w-40">Detalhes</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {alunos.map((aluno, idx) => (
-                    <TableRow key={idx}>
-                      <TableCell className="sticky left-0 z-30 font-medium border-r border-gray-100 bg-white transition-colors">{aluno.id}</TableCell>
-                      <TableCell className="sticky left-0 z-30 font-medium text-left pl-6 border-r border-gray-100 bg-white transition-colors">{aluno.nome}</TableCell>
-                      <TableCell>
-                        <div className={`mx-6 py-1 rounded-sm text-xs font-medium border-[1.5px] ${badgeColor(aluno.engajamento)}`}>
-                          {aluno.engajamento}
-                        </div>
-                      </TableCell>
-                      <TableCell>{aluno.mensagens}</TableCell>
-                      <TableCell>{aluno.quizzes}</TableCell>
-                      <TableCell>{aluno.tarefas}</TableCell>
-                      <TableCell>{aluno.acessos}</TableCell>
-                      <TableCell>{aluno.frequencia}</TableCell>
-                      <TableCell>{aluno.tempoMedio}</TableCell>
-                      <TableCell className="border-l border-gray-100 transition-colors">
-                        <Link href={`/detalhes/${aluno.id}`}>
-                          <button className="cursor-pointer">{aluno.detalhes}</button>
-                        </Link>
-                      </TableCell>                     
-                  </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-              <div className="flex items-center justify-between p-4 text-sm text-zinc-500 sticky bottom-0 z-50 bg-white">
-                <span>Mostrando 1 – 10 de 100 entradas</span>
-                <div className="flex gap-1">
-                  {[1, 2, 3, 4, "...", 10].map((p, i) => (
-                    <button
-                      key={i}
-                      className="rounded-md"
-                    >
-                      {p}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <DataTable
+              rowsPerPage={10}
+              data={alunos}
+              columns={columns}
+              searchTerm={searchTerm}
+            />
           </div>
         )}
       </div>
     </div>
   );
 }
-
