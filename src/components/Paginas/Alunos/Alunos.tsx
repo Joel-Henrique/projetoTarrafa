@@ -21,7 +21,7 @@ export default function Alunos({ cursos, alunos, cursoSelecionado }: AlunosProps
   const [searchTerm, setSearchTerm] = React.useState('');
   const [activeTab, setActiveTab] = React.useState("Engajamento");
 
-  const columns = getColumns(activeTab);
+  const columns = getColumns(activeTab, cursoSelecionado);
 
   return (
     <div className="flex-1 flex justify-center items-center pl-[240px]">

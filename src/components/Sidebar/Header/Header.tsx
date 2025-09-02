@@ -12,10 +12,10 @@ interface Curso {
 interface HeaderProps {
   cursos: Curso[];
   onCursoChange: (cursoId: string) => void;
+  cursoSelecionado: string | null;
 }
 
 export default function Header({ cursos, onCursoChange }: HeaderProps) {
-
   const router = useRouter();
   const searchParams = useSearchParams();
 

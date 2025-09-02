@@ -104,7 +104,7 @@ const DataTable: React.FC<DataTableProps> = ({ rowsPerPage, data, columns, searc
                                     key={colIndex}
                                     className={`transition-colors px-6 ${column.options?.cellClassName || ''
                                         } ${column.options?.sticky
-                                            ? 'sticky left-0 z-40 bg-inherit shadow-2xl shadow-black border-r border-gray-100 pl-6'
+                                            ? 'sticky bg-inherit left-0 z-30 shadow-cell font-medium text-left pl-6 border-r-[1.5px] border-gray-100'
                                             : ''
                                         }`}
                                 >
