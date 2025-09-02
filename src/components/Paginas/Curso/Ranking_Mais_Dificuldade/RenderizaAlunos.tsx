@@ -27,7 +27,7 @@ export default function RenderizaAlunos({ alunos }: RenderizaAlunosProps) {
                     </span>
                     <span className="flex-1 text-left text-gray-800">{aluno.label}</span>
                     <button className="text-gray-700 hover:text-gray-900">
-                       <Info size={25} />
+                        <Info size={25} />
                     </button>
                 </div>
             ))}

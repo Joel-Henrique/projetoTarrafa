@@ -5,12 +5,9 @@ import Header from '@/components/Sidebar/Header/Header';
 import Sidebar from '@/components/Sidebar/Header/Sidebar';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { getCursos } from '@/utils/mocks';
 
-const cursosMock = [
-  { id: 'EXT099', nome: 'Análise e Desenvolvimento de Sistemas', data: '2024.3' },
-  { id: 'DCC001', nome: 'Introdução a Sistemas de Informação', data: '2023.1' },
-  { id: 'DCC023', nome: 'Introdução a Ciência da Computação', data: '2025.2' },
-];
+const cursosMock = getCursos();
 
 export default function CursoPageClient() {
   const [cursoSelecionado, setCursoSelecionado] = useState<string | null>(null);

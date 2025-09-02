@@ -88,7 +88,7 @@ const DataTable: React.FC<DataTableProps> = ({ rowsPerPage, data, columns, searc
                             <TableHead
                                 key={idx}
                                 className={`min-w-40 ${column.options?.headerClassName || ''
-                                    } ${column.options?.sticky ? 'sticky left-0 z-40 bg-inherit font-semibold text-left pl-4' : 'text-center'
+                                    } ${column.options?.sticky ? 'sticky left-0 z-40 bg-inherit font-semibold text-left pl-6' : 'text-sm/tight text-center'
                                     }`}
                             >
                                 {column.label}
@@ -104,7 +104,7 @@ const DataTable: React.FC<DataTableProps> = ({ rowsPerPage, data, columns, searc
                                     key={colIndex}
                                     className={`transition-colors px-6 ${column.options?.cellClassName || ''
                                         } ${column.options?.sticky
-                                            ? 'sticky left-0 z-40 bg-inherit shadow-2xl shadow-black border-r border-gray-100 pl-4'
+                                            ? 'sticky left-0 z-40 bg-inherit shadow-2xl shadow-black border-r border-gray-100 pl-6'
                                             : ''
                                         }`}
                                 >
@@ -119,12 +119,15 @@ const DataTable: React.FC<DataTableProps> = ({ rowsPerPage, data, columns, searc
             </Table>
             <div className="flex items-center justify-between p-2 text-sm text-zinc-500 font-medium z-50 bg-white">
                 <div className="flex gap-2 font-medium">
-                    <button
-                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                        className="rounded-lg border-1 w-7 h-7 flex items-center justify-center hover:cursor-pointer hover:bg-gray-100 transition-colors focus:text-white focus:outline-none focus:border-[#374DAA] focus:bg-[#374DAA]"
-                    >
-                        <FaChevronLeft className='text-xs' />
-                    </button>
+
+                    {currentPage > 1 && (
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                            className="rounded-lg border-1 w-7 h-7 flex items-center justify-center hover:cursor-pointer hover:bg-gray-100 transition-colors focus:text-white focus:outline-none focus:border-[#374DAA] focus:bg-[#374DAA]"
+                        >
+                            <FaChevronLeft className='text-xs' />
+                        </button>
+                    )}
                     {renderPaginationButtons().map((page, i) =>
                         typeof page === 'number' ? (
                             <button
@@ -143,12 +146,15 @@ const DataTable: React.FC<DataTableProps> = ({ rowsPerPage, data, columns, searc
                             </span>
                         )
                     )}
-                    <button
-                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                        className="rounded-lg border-1 w-7 h-7 flex items-center justify-center hover:cursor-pointer hover:bg-gray-100 transition-colors focus:text-white focus:outline-none focus:border-[#374DAA] focus:bg-[#374DAA]"
-                    >
-                        <FaChevronRight className='text-xs' />
-                    </button>
+
+                    {currentPage < totalPages && (
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                            className="rounded-lg border-1 w-7 h-7 flex items-center justify-center hover:cursor-pointer hover:bg-gray-100 transition-colors focus:text-white focus:outline-none focus:border-[#374DAA] focus:bg-[#374DAA]"
+                        >
+                            <FaChevronRight className='text-xs' />
+                        </button>
+                    )}
                 </div>
                 <span>
                     Mostrando {(currentPage - 1) * rowsPerPage + 1} –{' '}

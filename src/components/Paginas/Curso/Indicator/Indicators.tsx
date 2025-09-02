@@ -8,6 +8,7 @@ import alunoIcon5 from './evasion.png';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+
 interface IndicatorsProps {
   cursoSelecionado: string | null;
 }
@@ -23,7 +24,7 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
         </div>
         <div className="m-10">
           <Link
-            href="/Alunos"
+            href={`/Alunos?id=${cursoSelecionado}`} // TODO: trocar para path parameters ?
             className="px-4 py-2 rounded bg-[#5a6acf] text-white hover:bg-[#374DAA] transition"
           >
             Saiba mais
