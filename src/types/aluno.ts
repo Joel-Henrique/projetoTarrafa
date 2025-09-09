@@ -1,6 +1,12 @@
 export interface AlunoType {
     id: number;
     nome: string;
+    email: string;
+    graduacao: string;
+    cidade: string;
+    polo: string;
+    ultimoAcesso: string;
+    primeiroAcesso: string;
 
     // engajamento
     flagEngajamento: number;

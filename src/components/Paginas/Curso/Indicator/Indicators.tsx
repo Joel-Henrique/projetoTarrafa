@@ -15,12 +15,11 @@ interface IndicatorsProps {
 
 export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
   return (
-
     <div className="Box my-10">
       <div className="maincurso">
         <div className="mt-10 ml-10 mb-5">
           <h1 className="text-xl font-poppins font-semibold text-left">Indicadores</h1>
-          <p style={{ color: "#9291A5" }}>Calculados</p>
+          <p style={{ color: "#9291A5" }}>calculados</p>
         </div>
         <div className="m-10">
           <Link

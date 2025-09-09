@@ -5,6 +5,12 @@ export function getAlunos() {
         {
             id: 1,
             nome: "Maria das Rosas Flores",
+            email: "maria@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 5,
             nPostsForunsAv: 5,
@@ -40,6 +46,12 @@ export function getAlunos() {
         {
             id: 2,
             nome: "José Pedro Ribeiro",
+            email: "jose@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 4,
             nPostsForunsAv: 2,
@@ -75,6 +87,12 @@ export function getAlunos() {
         {
             id: 3,
             nome: "Márcio Dantas",
+            email: "marcio@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 3,
             nPostsForunsAv: 4,
@@ -110,6 +128,12 @@ export function getAlunos() {
         {
             id: 4,
             nome: "Joaquina Paulina de Souza",
+            email: "joaquina@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 2,
             nPostsForunsAv: 1,
@@ -145,6 +169,12 @@ export function getAlunos() {
         {
             id: 5,
             nome: "Maria dos Cravos",
+            email: "maria@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 1,
             nPostsForunsAv: 5,
@@ -180,6 +210,12 @@ export function getAlunos() {
         {
             id: 6,
             nome: "Rita Lobaco",
+            email: "rita@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 3,
             nPostsForunsAv: 6,
@@ -215,6 +251,12 @@ export function getAlunos() {
         {
             id: 7,
             nome: "Luiz Pereira",
+            email: "luiz@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 4,
             nPostsForunsAv: 0,
@@ -250,6 +292,12 @@ export function getAlunos() {
         {
             id: 8,
             nome: "Maria dos Cravos",
+            email: "maria@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 1,
             nPostsForunsAv: 5,
@@ -285,6 +333,12 @@ export function getAlunos() {
         {
             id: 9,
             nome: "Rita Lobaco",
+            email: "rita@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 3,
             nPostsForunsAv: 6,
@@ -320,6 +374,12 @@ export function getAlunos() {
         {
             id: 10,
             nome: "Luiz Pereira",
+            email: "luiz@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 4,
             nPostsForunsAv: 0,
@@ -355,6 +415,12 @@ export function getAlunos() {
         {
             id: 11,
             nome: "Maria dos Cravos",
+            email: "maria@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 1,
             nPostsForunsAv: 5,
@@ -390,6 +456,12 @@ export function getAlunos() {
         {
             id: 12,
             nome: "Rita Lobaco",
+            email: "rita@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 3,
             nPostsForunsAv: 6,
@@ -425,6 +497,12 @@ export function getAlunos() {
         {
             id: 13,
             nome: "Luiz Pereira",
+            email: "luiz@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 4,
             nPostsForunsAv: 0,
@@ -460,6 +538,12 @@ export function getAlunos() {
         {
             id: 14,
             nome: "Maria dos Cravos",
+            email: "maria@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 1,
             nPostsForunsAv: 5,
@@ -495,6 +579,12 @@ export function getAlunos() {
         {
             id: 15,
             nome: "Rita Lobaco",
+            email: "rita@gmail.com",
+            graduacao: "Engenharia Civil",
+            cidade: "Montes Claros",
+            polo: "Montes Claros",
+            primeiroAcesso: "14/04/2018 ás 13:33",
+            ultimoAcesso: "24/10/2023 às 12:52", 
             // engajamento
             flagEngajamento: 3,
             nPostsForunsAv: 6,
