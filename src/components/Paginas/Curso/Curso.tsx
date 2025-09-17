@@ -1,11 +1,11 @@
 'use client';
-import Link from 'next/link'
+
 import Indicators from './Indicator/Indicators';
-import CompDemo from './CompDemo/CompDemograf';
 import Grafico from './Atividades/Atividades';
 import NumAbso from './NumAbso/NumAbso';
 import Ranking_Melhor_Desempenho from './Ranking_Melhor_Desempenho/Ranking_Melhor_Desempenho';
 import Ranking_Mais_Dificuldade from './Ranking_Mais_Dificuldade/Ranking_Mais_Dificuldade';
+import DadosGerais from './DadosGerais/DadosGerais';
 type CursoType = {
   id: string;
   nome: string;
@@ -25,7 +25,7 @@ export default function Curso({ cursos, cursoSelecionado }: CursoProps) {
       <div className="BoxCurso">
         <div className="flex flex-row justify-between items-start w-full">
           <div className="flex flex-col items-start">
-            <h1 className="text-xl font-poppins font-semibold text-left">Curso</h1>
+            <h1 className="text-xl font-poppins font-semibold text-left">Disciplina</h1>
             {curso ? (
               <p style={{ color: '#374DAA' }} className="text-left text-xl font-semibold">
                 {curso.nome}
@@ -48,8 +48,8 @@ export default function Curso({ cursos, cursoSelecionado }: CursoProps) {
         <div>
           {curso ? (
             <div className="center-wrapper flex flex-col justify-between">
+              <DadosGerais />
               <Indicators cursoSelecionado={cursoSelecionado} />
-              <CompDemo cursoSelecionado={cursoSelecionado} />
               <div className="flex flex-row space-x-5">
                 <Grafico cursoSelecionado={cursoSelecionado} />
                 <NumAbso cursoSelecionado={cursoSelecionado} />

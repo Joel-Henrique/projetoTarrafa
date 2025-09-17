@@ -19,7 +19,7 @@ const alunos = [
 
 export default function Ranking_Melhor_Desempenho({ cursoSelecionado }: Ranking_Melhor_DesempenhoProps) {
     return (
-        <div className="Box my-10">
+        <div className="Box mb-10">
             <div className="Boxcursopequeno">
                 <div className="mt-10 ml-10 mb-5">
                     <h1 className="text-xl font-poppins font-semibold text-left">Ranking</h1>

@@ -17,14 +17,14 @@ export default function Grafico({ cursoSelecionado }: GraficoProps) {
             <div className="Boxcursopequeno">
                 <div className="mt-10 ml-10 mb-5">
                     <h1 className="text-xl font-poppins font-semibold text-left">Atividades</h1>
-                    <p style={{ color: "#9291A5" }}>do Curso</p>
+                    <p style={{ color: "#9291A5" }}>da Disciplina</p>
                 </div>
             </div>
-            <div className="relative after:absolute after:bottom-0 after:left-1/2 after:translate-x-[-50%] after:w-[90%] after:h-[1px] after:bg-gray-200 after:shadow-[0_2px_4px_rgba(0,0,0,0.05)] bg-white" />
+            <div className="relative after:absolute after:bottom-0 after:left-1/2 after:translate-x-[-50%] after:w-[90%] after:h-[1px] after:bg-gray-200 bg-white" />
             
             <GraficoComp legenda={legenda} />
 
-            <div className="flex justify-center flex-wrap gap-4">
+            <div className="flex justify-center flex-wrap gap-4 mb-8">
             <p
                 style={{
                     display: 'flex',

@@ -8,13 +8,10 @@ const ResponsiveBar = dynamic(
     { ssr: false }
   );
   
-
 const data = [
-  { categoria: 'Matriculados', valor: 40 },
-  { categoria: 'Aprovados', valor: 34 },
-  { categoria: 'Reprovados', valor: 5 },
-  { categoria: 'Nunca acessaram a disciplina', valor: 1 },
-  { categoria: 'Trancaram', valor: 3 },
+  { categoria: 'Aprovados', valor: 75 },
+  { categoria: 'Reprovados por nota', valor: 20 },
+  { categoria: 'Reprovados por infrequência', valor: 5 },
 ];
 
 const Grafico = () => (

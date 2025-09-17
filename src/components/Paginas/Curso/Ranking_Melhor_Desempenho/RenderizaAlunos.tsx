@@ -1,4 +1,4 @@
-import { Info } from 'lucide-react';
+import { FaPlus } from 'react-icons/fa';
 
 interface Aluno {
     id: string;
@@ -25,8 +25,8 @@ export default function RenderizaAlunos({ alunos }: RenderizaAlunosProps) {
                         {index + 1}
                     </span>
                     <span className="flex-1 text-left text-gray-800">{aluno.label}</span>
-                    <button className="text-gray-700 hover:text-gray-900">
-                        <Info size={25} />
+                    <button className="text-gray-700 cursor-pointer hover:text-gray-900">
+                        <FaPlus className='text-2xl text-gray-700' />
                     </button>
                 </div>
             ))}

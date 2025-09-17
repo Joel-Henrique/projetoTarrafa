@@ -7,7 +7,6 @@ import { getCursos } from '@/utils/mocks';
 
 const cursosMock = getCursos();
 
-
 export default function HomeLayout() {
   const [cursoSelecionado, setCursoSelecionado] = useState<string | null>(null);
 
@@ -21,6 +20,5 @@ export default function HomeLayout() {
         </main>
       </div>
     </div>
-
   );
 }

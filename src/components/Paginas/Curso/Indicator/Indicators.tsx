@@ -6,8 +6,6 @@ import alunoIcon3 from './baixados.png';
 import alunoIcon1 from './baixados1.png';
 import alunoIcon5 from './evasion.png';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 interface IndicatorsProps {
   cursoSelecionado: string | null;
@@ -15,7 +13,7 @@ interface IndicatorsProps {
 
 export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
   return (
-    <div className="Box my-10">
+    <div className="Box mt-10">
       <div className="maincurso">
         <div className="mt-10 ml-10 mb-5">
           <h1 className="text-xl font-poppins font-semibold text-left">Indicadores</h1>
@@ -23,7 +21,7 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
         </div>
         <div className="m-10">
           <Link
-            href={`/Alunos?id=${cursoSelecionado}`} // TODO: trocar para path parameters ?
+            href="/Alunos"
             className="px-4 py-2 rounded bg-[#5a6acf] text-white hover:bg-[#374DAA] transition"
           >
             Saiba mais
@@ -36,7 +34,7 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
       <div className={styles.BoxCentralizarIndicadores}>
         <div className={styles.EspacarIndicadores}>
           <div className="quadrado bg-[#DCFCE7]">
-            <div className="flex flex-col w-full justify-between ">
+            <div className="flex flex-col w-full justify-between">
               <div className="ml-5 flex justify-start space-x-3">
                 <div className="bg-[#3CD856] rounded-full flex items-center justify-center w-8 h-8">
                   <Image
@@ -49,10 +47,10 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
                 </div>
                 <p className="text-2xl font-bold text-gray-900">70%</p>
               </div>
-              <div className="ml-17 mb-3 flex text-left">
+              <div className="ml-17 flex text-left">
                 <div className="flex flex-col leading-snug">
                   <p className={styles.textoPersonalizado2}>de alunos</p>
-                  <p className={styles.textoPersonalizado}>engajados</p>
+                  <p className={styles.textoPersonalizado}>com ótimo índice<br />de interação avaliativa</p>
                 </div>
               </div>
             </div>
@@ -81,9 +79,7 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
               </div>
             </div>
           </div>
-
-
-
+          
           <div className="quadrado bg-[#C3D8FF]">
             <div className="flex flex-col w-full justify-between ">
               <div className="ml-8 flex justify-start space-x-3">
@@ -102,7 +98,7 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
               <div className="ml-19 flex text-left">
                 <div className="flex flex-col leading-snug">
                   <p className={styles.textoPersonalizado2}>de alunos</p>
-                  <p className={styles.textoPersonalizado}>com motivação boa</p>
+                  <p className={styles.textoPersonalizado}>com bom índice<br />de interação não avaliativa</p>
                 </div>
               </div>
             </div>
@@ -137,48 +133,30 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
       <div className={styles.BoxCentralizarIndicadores}>
         <div className={styles.BoxGrupodeRisco}>
           <div className="text-left">
-            <p className="text-base font-poppins font-semibold  ml-4 mt-6">Grupo de Risco</p>
+            <p className="text-base font-poppins text-nowrap font-semibold ml-6 mt-6 mb-3">Grupo de Risco</p>
           </div>
           <div className={styles.BoxGrupodeRiscoIndicadores}>
-            <div className={styles.EspacarIndicadores}>
-              <div className="quadrado bg-[#FFD3A6]">
-                <div className="flex flex-col w-full justify-between ">
-                  <div className="ml-3 flex justify-start space-x-3">
-                    <div className="bg-[#D86D3C] rounded-full flex items-center justify-center w-8 h-8">
-                      <FontAwesomeIcon icon={faTriangleExclamation} className="mb-1 mr-0.3 text-white text-xl" />
-                    </div>
-                    <p className="text-2xl font-bold text-gray-900">3%</p>
-                  </div>
 
-                  <div className="ml-15 flex text-left">
-                    <div className="flex flex-col leading-snug">
-                      <p className={styles.textoPersonalizado2}>de alunos</p>
-                      <p className={styles.textoPersonalizado}> que precisam de reforço</p>
-                    </div>
+            <div className="quadrado bg-[#FFD8E2]">
+              <div className="flex flex-col w-full justify-between">
+                <div className="ml-5 flex justify-start space-x-3">
+                  <div className="bg-[#D83C8C] rounded-full flex items-center justify-center w-8 h-8">
+                    <Image
+                      src={alunoIcon5}
+                      alt="Ícone aluno-professor"
+                      width={21}
+                      height={28}
+                      className="object-cover"
+                    />
                   </div>
+                  <p className="text-2xl font-bold text-gray-900">1%</p>
                 </div>
-              </div>
 
-              <div className="quadrado bg-[#FFD8E2]">
-                <div className="flex flex-col w-full justify-between ">
-                  <div className="ml-5 flex justify-start space-x-3">
-                    <div className="bg-[#D83C8C] rounded-full flex items-center justify-center w-8 h-8">
-                      <Image
-                        src={alunoIcon5}
-                        alt="Ícone aluno-professor"
-                        width={21}
-                        height={28}
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="text-2xl font-bold text-gray-900">1%</p>
-                  </div>
-
-                  <div className="ml-17 flex text-left">
-                    <div className="flex flex-col leading-snug">
-                      <p className={styles.textoPersonalizado2}>de alunos</p>
-                      <p className={styles.textoPersonalizado}>em risco de evasão</p>
-                    </div>
+                <div className="ml-17 flex text-left">
+                  <div className="flex flex-col leading-snug">
+                    <p className={styles.textoPersonalizado2}>de alunos</p>
+                    <p className={styles.textoPersonalizado}>com alto<br />
+                      índice de desistência</p>
                   </div>
                 </div>
               </div>

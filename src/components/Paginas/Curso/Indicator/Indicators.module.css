@@ -14,6 +14,7 @@
     background-color: rgba(217, 217, 217, 0.45);
     height: 250px;
     margin-bottom: 20px;
+    width: 400px;
 }
 
 .BoxGrupodeRiscoIndicadores {
@@ -29,12 +30,12 @@
     justify-content: center;
 }
 
-.textoPersonalizado{
-    font-size: 16px;
+.textoPersonalizado {
+    font-size: 14px;
     color: #374DAA;
     font-weight: 600;
+    text-wrap: wrap;
 }
-.textoPersonalizado2{
-    font-size: 16px;
-    
+.textoPersonalizado2 {
+    font-size: 14px;
 }
