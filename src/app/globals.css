@@ -84,6 +84,7 @@ body {
   justify-content: space-between;
   width: 1080px;
 }
+
 .Boxcursopequeno{
   flex-direction: row;
   display: flex;  

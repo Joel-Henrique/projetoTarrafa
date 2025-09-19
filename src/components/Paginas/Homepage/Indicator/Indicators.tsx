@@ -18,7 +18,7 @@ export default function Indicators() {
         </div>
         <div className="m-10">
           <Link
-            href="/Alunos"
+            href="/Cursos"
             className="px-4 py-2 rounded bg-[#5a6acf] text-white hover:bg-[#374DAA] transition"
           >
             Saiba mais
@@ -118,7 +118,7 @@ export default function Indicators() {
 
               <div className="ml-17 flex text-left">
                 <div className="flex flex-col leading-snug">
-                  <p className={styles.textoPersonalizado2}>de cursos</p>
+                  <p className={styles.textoPersonalizado2}>de disciplinas</p>
                   <p className={styles.textoPersonalizado}>com boa relação<br />aluno-professor</p>
                 </div>
               </div>
@@ -151,9 +151,8 @@ export default function Indicators() {
 
                 <div className="ml-17 flex text-left">
                   <div className="flex flex-col leading-snug">
-                    <p className={styles.textoPersonalizado2}>de cursos</p>
-                    <p className={styles.textoPersonalizado}>com alto<br />
-                      índice de desistência</p>
+                    <p className={styles.textoPersonalizado2}>de disciplinas</p>
+                    <p className={styles.textoPersonalizado}>com alto índice <br />de desistência</p>
                   </div>
                 </div>
               </div>

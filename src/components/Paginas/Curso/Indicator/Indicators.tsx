@@ -21,7 +21,12 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
         </div>
         <div className="m-10">
           <Link
-            href="/Alunos"
+				      href={{
+              pathname: '/Alunos',
+              query: {
+                id: cursoSelecionado
+              }
+            }}
             className="px-4 py-2 rounded bg-[#5a6acf] text-white hover:bg-[#374DAA] transition"
           >
             Saiba mais
@@ -79,7 +84,7 @@ export default function Indicators({ cursoSelecionado }: IndicatorsProps) {
               </div>
             </div>
           </div>
-          
+
           <div className="quadrado bg-[#C3D8FF]">
             <div className="flex flex-col w-full justify-between ">
               <div className="ml-8 flex justify-start space-x-3">

@@ -2,7 +2,7 @@
   export default function DadosGerais() {
     return (
       <div className="Box2 mb-10">
-        <div className="mb-22">
+        <div className="mb-14">
           <div className="maincurso">
             <div className="mt-10 ml-10 mb-5">
               <h1 className="text-xl font-poppins font-semibold text-left">

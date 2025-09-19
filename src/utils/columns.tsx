@@ -79,18 +79,6 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			label: "Percentual de Tarefas Enviadas",
 			name: "tarefasEnv"
 		},
-		{
-			label: "Nº de Acessos (últimos 7 dias)",
-			name: "nAcessos"
-		},
-		{
-			label: "Frequência de login",
-			name: "frequenciaLogin"
-		},
-		{
-			label: "Tempo médio por sessão",
-			name: "tempoMedio"
-		},
 		detalhesColumn
 	];
 
@@ -124,10 +112,6 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 		{
 			label: "Nº de Atividades Abaixo da Média",
 			name: "ativAbaixoMedia"
-		},
-		{
-			label: "Frequência de Login",
-			name: "frequenciaLogin"
 		},
 		detalhesColumn
 	];
@@ -163,14 +147,6 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			label: "Nº de Interações na Última Semana",
 			name: "nInter"
 		},
-		{
-			label: "Sentimento Predominante nas Mensagens",
-			name: "sentMsgs"
-		},
-		{
-			label: "Frequência de Login",
-			name: "frequenciaLogin"
-		},
 		detalhesColumn
 	];
 
@@ -198,16 +174,8 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			name: "nMsgsAlunoProf"
 		},
 		{
-			label: "Nº de Mensagens Privadas",
-			name: "nMsgsPriv"
-		},
-		{
 			label: "Percentual de Participação em Fóruns Mediados pelo Docente",
 			name: "partForunsDocente"
-		},
-		{
-			label: "Sentimento das Mensagens Privadas",
-			name: "sentMsgsPriv"
 		},
 		{
 			label: "Frequência de Contato Aluno-Professor",
@@ -239,21 +207,17 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			label: "Nível de Engajamento",
 			name: "flagEngajamento"
 		},
-		{
-			label: "Nº de Notas Abaixo da Média",
-			name: "nNotasAbaixoMedia"
+				{
+			label: "Nível de Desempenho",
+			name: "flagDesempenho"
 		},
-		{
-			label: "Nº de Acessos (últimos 7 dias)",
-			name: "nAcessos"
+				{
+			label: "Nível de Motivação",
+			name: "flagMotivacao"
 		},
-		{
-			label: "Sentimento Predominante nas Mensagens",
-			name: "sentMsgs"
-		},
-		{
-			label: "Frequência de Login",
-			name: "frequenciaLogin"
+				{
+			label: "Nível de Relação Aluno-Professor",
+			name: "flagRelAlunoProf"
 		},
 		{
 			label: "Detalhes",

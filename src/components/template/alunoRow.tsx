@@ -25,14 +25,14 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
             case 'flagMotivacao':
             case 'flagRelAlunoProf':
                 return (
-                    <div className={`py-1 px-3 rounded-md text-xs font-medium border-[1.5px] ${getFlagCor(value)}`}>
+                    <div className={`py-1 px-6 max-w-fit rounded-md text-xs font-medium border-[1.5px] ${getFlagCor(value)}`}>
                         {getNivel(value)}
                     </div>
                 );
 
             case 'flagDesistencia':
                 return (
-                    <div className={`py-1 px-3 rounded-md text-xs font-medium border-[1.5px] ${getFlagDesistenciaCor(value)}`}>
+                    <div className={`py-1 px-6 max-w-fit rounded-md text-xs font-medium border-[1.5px] ${getFlagDesistenciaCor(value)}`}>
                         {getDesistencia(value)}
                     </div>
                 );
@@ -49,9 +49,6 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
                     { label: "Nº de Posts em Fóruns Avaliativos", name: "nPostsForunsAv" },
                     { label: "Percentual de Quizzes Realizados", name: "quizzesRealiz" },
                     { label: "Percentual de Tarefas Enviadas", name: "tarefasEnv" },
-                    { label: "Nº de Acessos (últimos 7 dias)", name: "nAcessos" },
-                    { label: "Frequência de login", name: "frequenciaLogin" },
-                    { label: "Tempo médio por sessão", name: "tempoMedio" },
                 ];
 
             case "Desempenho":
@@ -59,7 +56,6 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
                     { label: "Média Geral das Notas Avaliativas", name: "mediaNotas" },
                     { label: "Comparação com a Média da Turma", name: "compMedia" },
                     { label: "Nº de Atividades Abaixo da Média", name: "ativAbaixoMedia" },
-                    { label: "Frequência de Login", name: "frequenciaLogin" },
                 ];
 
             case "Motivação":
@@ -67,27 +63,24 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
                     { label: "Percentual de Participação em Fóruns Não Obrigatórios", name: "partForunsNaoObrig" },
                     { label: "Nº de Visualizações em Materiais Complementares", name: "nVisuCompl" },
                     { label: "Nº de Interações na Última Semana", name: "nInter" },
-                    { label: "Sentimento Predominante nas Mensagens", name: "sentMsgs" },
-                    { label: "Frequência de Login", name: "frequenciaLogin" },
                 ];
 
             case "Relação Aluno-Professor":
                 return [
                     { label: "Nº de Mensagens Trocadas com o Professor", name: "nMsgsAlunoProf" },
-                    { label: "Nº de Mensagens Privadas", name: "nMsgsPriv" },
                     { label: "Percentual de Participação em Fóruns Mediados pelo Docente", name: "partForunsDocente" },
-                    { label: "Sentimento das Mensagens Privadas", name: "sentMsgsPriv" },
                     { label: "Frequência de Contato Aluno-Professor", name: "freqContAlunoProf" },
                 ];
 
             case "Desistência":
                 return [
-                    { label: "Nº de Notas Abaixo da Média", name: "nNotasAbaixoMedia" },
-                    { label: "Nº de Acessos (últimos 7 dias)", name: "nAcessos" },
-                    { label: "Sentimento Predominante nas Mensagens", name: "sentMsgs" },
-                    { label: "Frequência de Login", name: "frequenciaLogin" },
+                    { label: "Nível de Engajamento", name: "flagEngajamento" },
+                    { label: "Nível de Desempenho", name: "flagDesempenho" },
+                    { label: "Nível de Motivação", name: "flagMotivacao" },
+                    { label: "Nível de Relação Aluno-Professor", name: "flagRelAlunoProf" },
+                    { label: "Taxa de Desistência", name: "flagDesistencia" },
                 ];
-
+                
             default:
                 return [];
         }
@@ -109,8 +102,8 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
                 </TableHeader>
                 <TableBody>
                     <TableRow>
-                        {columns.map((column, index) => (
-                            <TableCell key={index} className="text-center p-4">
+                        {columns.map((column, index) => ( // centralizar
+                            <TableCell key={index} className="text-center p-4"> 
                                 {render(column.name, aluno[column.name as keyof AlunoType])}
                             </TableCell>
                         ))}

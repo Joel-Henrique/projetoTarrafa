@@ -38,7 +38,7 @@
               <p className="text-base text-gray-600 mb-2 text-left mr-6">
                 Taxa de <br />aprovação <br />da disciplina
               </p>
-              <div className="w-20 h-12 bg-gray-100 flex items-center justify-center rounded text-base ">
+              <div className="w-20 h-12 bg-gray-100 flex items-center justify-center rounded text-base">
                 75%
               </div>
             </div>
