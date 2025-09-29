@@ -27,6 +27,12 @@ export interface AlunoType {
     nVisuCompl: number;
     nInter: number;
 
+    // profundidade cognitiva
+    flagProfCog: number;
+    profCogForuns: number;
+    profCogQuizzes: number;
+    profCogTarefas: number;
+
     // relacao aluno-professor
     flagRelAlunoProf: number;
     nMsgsAlunoProf: number;

@@ -17,6 +17,14 @@
   font-family: var(--font-poppins);
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 body {
   background: var(--background);
@@ -112,6 +120,13 @@ body {
   border-radius: 10px;
 }
 
+.Box4{
+  height: 350px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 
+  0 1px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
 .center-wrapper {
   display: flex;
   align-items: center;     
@@ -126,10 +141,11 @@ body {
   width: 250px;
   height: 150px;
   margin: 10px;
+  margin-bottom: 15px;
 }
 
 .BoxCurso{
-  margin-top: 20px;
+  margin-top: 35px;
   width: 1080px;
 }
 

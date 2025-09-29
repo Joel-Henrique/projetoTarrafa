@@ -3,6 +3,7 @@ import DataTable from "@/components/template/dataTable";
 import SearchInput from "@/components/template/searchInput";
 import { AlunoType } from "@/types/aluno";
 import { getColumns } from "@/utils/columns";
+import ScrollableTabs from "@/components/template/indicadoresTabs";
 
 interface CursoType {
   id: string;
@@ -15,6 +16,13 @@ interface AlunosProps {
   alunos: AlunoType[];
   cursoSelecionado: string | null;
 }
+
+const tabs = ['Índice de Interação Avaliativa',
+  'Índice de Interação Não Avaliativa',
+  'Desempenho',
+  'Profundidade Cognitiva',
+  'Relação Aluno-Professor',
+  'Índice de Desistência'];
 
 export default function Alunos({ cursos, alunos, cursoSelecionado }: AlunosProps) {
   const curso = cursos.find(c => c.id === cursoSelecionado);
@@ -51,25 +59,16 @@ export default function Alunos({ cursos, alunos, cursoSelecionado }: AlunosProps
         </div>
         {curso && (
           <div className="flex flex-col gap-4">
-
             {/* Indicadores */}
-            <div className="flex gap-2 mb-2 justify-between">
-              {["Engajamento", "Desempenho", "Motivação", "Relação Aluno-Professor", "Desistência"].map((tab, i) => (
-                <button
-                  key={i}
-                  onClick = {() => setActiveTab(tab)}
-                  className={`rounded-lg px-4 py-2 border-2 transition-colors cursor-pointer ${
-                    activeTab === tab 
-                      ? 'text-white bg-[#374DAA] border-[#374DAA]' 
-                      : 'text-gray-800 bg-white border-gray-300 hover:bg-gray-100'
-                  }`}
-                >
-                  {tab}
-                </button>
-              ))}
+            <div className="flex flex-col gap-4">
+              <div className="flex-1 gap-2 justify-between">
+                <ScrollableTabs
+                  tabs={tabs}
+                  activeTab={activeTab}
+                  onTabClick={setActiveTab}
+                />
+              </div>
 
-              {/*Busca*/}
-              <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             </div>
 
             {/* Tabela */}

@@ -15,7 +15,7 @@ export default function Sidebar() {
           />
           <ul className="sidebaralign space-y-4">
             <li className="">MENU</li>
-            <div className="sidebarpainel space-x-4">
+            <div className="sidebarpainel space-x-3">
               <Image
                 className="ml-4"
                 src="/sidebarpainelcurso.png"
@@ -23,7 +23,7 @@ export default function Sidebar() {
                 width={20}
                 height={20}
               />
-              <li>Painel dos Cursos</li>
+              <li>Painel das Disciplinas</li>
             </div>
           </ul>
         </ul>

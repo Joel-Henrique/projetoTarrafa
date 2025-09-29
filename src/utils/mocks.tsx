@@ -27,6 +27,11 @@ export function getAlunos() {
             partForunsNaoObrig: "95%",
             nVisuCompl: 42,
             nInter: 28,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 5,
             nMsgsAlunoProf: 8,
@@ -68,6 +73,11 @@ export function getAlunos() {
             partForunsNaoObrig: "85%",
             nVisuCompl: 35,
             nInter: 20,
+            // profundidade cognitiva
+            flagProfCog: 2,
+            profCogForuns: 3,
+            profCogQuizzes: 2,
+            profCogTarefas: 1,
             // relacao aluno-professor
             flagRelAlunoProf: 4,
             nMsgsAlunoProf: 5,
@@ -109,6 +119,11 @@ export function getAlunos() {
             partForunsNaoObrig: "60%",
             nVisuCompl: 28,
             nInter: 15,
+            // profundidade cognitiva
+            flagProfCog: 0,
+            profCogForuns: 0,
+            profCogQuizzes: 0,
+            profCogTarefas: 0,
             // relacao aluno-professor
             flagRelAlunoProf: 3,
             nMsgsAlunoProf: 2,
@@ -150,6 +165,11 @@ export function getAlunos() {
             partForunsNaoObrig: "20%",
             nVisuCompl: 10,
             nInter: 3,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 2,
             nMsgsAlunoProf: 0,
@@ -191,6 +211,11 @@ export function getAlunos() {
             partForunsNaoObrig: "15%",
             nVisuCompl: 8,
             nInter: 2,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 1,
             nMsgsAlunoProf: 1,
@@ -232,6 +257,11 @@ export function getAlunos() {
             partForunsNaoObrig: "65%",
             nVisuCompl: 30,
             nInter: 18,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 3,
             nMsgsAlunoProf: 3,
@@ -273,6 +303,11 @@ export function getAlunos() {
             partForunsNaoObrig: "30%",
             nVisuCompl: 15,
             nInter: 5,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 2,
             nMsgsAlunoProf: 1,
@@ -314,6 +349,11 @@ export function getAlunos() {
             partForunsNaoObrig: "15%",
             nVisuCompl: 8,
             nInter: 2,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 1,
             nMsgsAlunoProf: 1,
@@ -355,6 +395,11 @@ export function getAlunos() {
             partForunsNaoObrig: "65%",
             nVisuCompl: 30,
             nInter: 18,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 3,
             nMsgsAlunoProf: 3,
@@ -396,6 +441,11 @@ export function getAlunos() {
             partForunsNaoObrig: "30%",
             nVisuCompl: 15,
             nInter: 5,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 2,
             nMsgsAlunoProf: 1,
@@ -437,6 +487,11 @@ export function getAlunos() {
             partForunsNaoObrig: "15%",
             nVisuCompl: 8,
             nInter: 2,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 1,
             nMsgsAlunoProf: 1,
@@ -478,6 +533,11 @@ export function getAlunos() {
             partForunsNaoObrig: "65%",
             nVisuCompl: 30,
             nInter: 18,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 3,
             nMsgsAlunoProf: 3,
@@ -519,6 +579,11 @@ export function getAlunos() {
             partForunsNaoObrig: "30%",
             nVisuCompl: 15,
             nInter: 5,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 2,
             nMsgsAlunoProf: 1,
@@ -560,6 +625,11 @@ export function getAlunos() {
             partForunsNaoObrig: "15%",
             nVisuCompl: 8,
             nInter: 2,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 1,
             nMsgsAlunoProf: 1,
@@ -601,6 +671,11 @@ export function getAlunos() {
             partForunsNaoObrig: "65%",
             nVisuCompl: 30,
             nInter: 18,
+            // profundidade cognitiva
+            flagProfCog: 3,
+            profCogForuns: 3,
+            profCogQuizzes: 3,
+            profCogTarefas: 3,
             // relacao aluno-professor
             flagRelAlunoProf: 3,
             nMsgsAlunoProf: 3,

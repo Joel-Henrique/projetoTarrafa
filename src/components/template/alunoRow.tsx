@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { AlunoType } from '@/types/aluno';
-import { getNivel, getFlagCor, getDesistencia, getFlagDesistenciaCor } from '@/utils/columns';
+import { getNivel, getFlagCor, getProfCogCor, getDesistencia, getFlagDesistenciaCor } from '@/utils/columns';
 import {
     Table,
     TableBody,
@@ -25,9 +25,14 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
             case 'flagMotivacao':
             case 'flagRelAlunoProf':
                 return (
-                    <div className={`py-1 px-6 max-w-fit rounded-md text-xs font-medium border-[1.5px] ${getFlagCor(value)}`}>
+                    <div className={`py-1 px-6 max-w-fit text-center rounded-md text-xs font-medium border-[1.5px] ${getFlagCor(value)}`}>
                         {getNivel(value)}
                     </div>
+                );
+
+            case 'flagProfCog':
+                return (
+                    <div className={`py-1 px-6 max-w-fit rounded-md text-xs font-medium border-[1.5px] ${getProfCogCor(value)}`}></div>
                 );
 
             case 'flagDesistencia':
@@ -44,7 +49,7 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
 
     const getColumns = () => {
         switch (activeTab) {
-            case "Engajamento":
+            case "Índice de Interação Avaliativa":
                 return [
                     { label: "Nº de Posts em Fóruns Avaliativos", name: "nPostsForunsAv" },
                     { label: "Percentual de Quizzes Realizados", name: "quizzesRealiz" },
@@ -58,11 +63,18 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
                     { label: "Nº de Atividades Abaixo da Média", name: "ativAbaixoMedia" },
                 ];
 
-            case "Motivação":
+            case "Índice de Interação Não Avaliativa":
                 return [
                     { label: "Percentual de Participação em Fóruns Não Obrigatórios", name: "partForunsNaoObrig" },
                     { label: "Nº de Visualizações em Materiais Complementares", name: "nVisuCompl" },
                     { label: "Nº de Interações na Última Semana", name: "nInter" },
+                ];
+
+            case "Profundidade Cognitiva":
+                return [
+                    { label: "Nível Médio de Profundidade Cognitiva em Fóruns", name: "profCogForuns" },
+                    { label: "Nível Médio de Profundidade Cognitiva em Quizzes", name: "profCogQuizzes" },
+                    { label: "Nível Médio de Profundidade Cognitiva em Tarefas", name: "profCogTarefas" },
                 ];
 
             case "Relação Aluno-Professor":
@@ -72,15 +84,15 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
                     { label: "Frequência de Contato Aluno-Professor", name: "freqContAlunoProf" },
                 ];
 
-            case "Desistência":
+            case "Índice de Desistência":
                 return [
                     { label: "Nível de Engajamento", name: "flagEngajamento" },
                     { label: "Nível de Desempenho", name: "flagDesempenho" },
                     { label: "Nível de Motivação", name: "flagMotivacao" },
                     { label: "Nível de Relação Aluno-Professor", name: "flagRelAlunoProf" },
-                    { label: "Taxa de Desistência", name: "flagDesistencia" },
+                    { label: "Índice de Desistência", name: "flagDesistencia" },
                 ];
-                
+
             default:
                 return [];
         }
@@ -92,7 +104,7 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
         <div className="bg-white ml-8 mr-8 mb-8 mt-4">
             <Table className="border border-gray-100 shadow-sm">
                 <TableHeader>
-                    <TableRow className="bg-gray-100">
+                    <TableRow className="bg-gray-100 h-16">
                         {columns.map((column, index) => (
                             <TableHead key={index} className="text-center min-w-40">
                                 {column.label}
@@ -101,16 +113,19 @@ const AlunoRow: React.FC<AlunoRowProps> = ({ aluno, activeTab }) => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    <TableRow>
-                        {columns.map((column, index) => ( // centralizar
-                            <TableCell key={index} className="text-center p-4"> 
-                                {render(column.name, aluno[column.name as keyof AlunoType])}
+                    <TableRow className="h-16">
+                        {columns.map((column, index) => (
+                            <TableCell key={index} className="p-4">
+                                <div className="flex items-center justify-center">
+                                    {render(column.name, aluno[column.name as keyof AlunoType])}
+                                </div>
                             </TableCell>
                         ))}
                     </TableRow>
                 </TableBody>
             </Table>
         </div>
+
     );
 };
 

@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { AlunoType } from "@/types/aluno";
 import * as React from "react";
 import AlunoRow from '@/components/template/alunoRow';
+import ScrollableTabs from '@/components/template/indicadoresTabs';
 
 interface IndicatorsProps {
   aluno: AlunoType;
@@ -27,8 +28,15 @@ export const getNivel = (nivel: number) => {
 
 export const getDesistencia = (flag: boolean) => flag ? "Sim" : "Não";
 
+const tabs = ['Índice de Interação Avaliativa',
+  'Índice de Interação Não Avaliativa',
+  'Desempenho',
+  'Profundidade Cognitiva',
+  'Relação Aluno-Professor',
+  'Índice de Desistência'];
+
 export default function Indicators({ aluno, cursoSelecionado }: IndicatorsProps) {
-  const [activeTab, setActiveTab] = React.useState("Engajamento");
+  const [activeTab, setActiveTab] = React.useState("Índice de Interação Avaliativa");
 
   return (
     <div className="Box my-6">
@@ -164,19 +172,14 @@ export default function Indicators({ aluno, cursoSelecionado }: IndicatorsProps)
         </div>
       </div>
 
-      <div className="flex gap-2 my-6 ml-10">
-        {["Engajamento", "Desempenho", "Motivação", "Relação Aluno-Professor", "Desistência"].map((tab, i) => (
-          <button
-            key={i}
-            onClick={() => setActiveTab(tab)}
-            className={`rounded-lg px-4 py-2 border-2 transition-colors cursor-pointer ${activeTab === tab
-              ? 'text-white bg-[#374DAA] border-[#374DAA]'
-              : 'text-gray-800 bg-white border-gray-300 hover:bg-gray-100'
-              }`}
-          >
-            {tab}
-          </button>
-        ))}
+      <div className="flex gap-2 my-6 mx-10">
+        <div className="flex-1 gap-2 justify-between">
+                <ScrollableTabs
+                  tabs={tabs}
+                  activeTab={activeTab}
+                  onTabClick={setActiveTab}
+                />
+              </div>
       </div>
 
       <AlunoRow aluno={aluno} activeTab={activeTab} />

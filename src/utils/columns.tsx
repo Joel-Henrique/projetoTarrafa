@@ -23,6 +23,16 @@ export const getFlagCor = (nivel: number) => {
 	}
 };
 
+export const getProfCogCor = (nivel: number) => {
+	switch (nivel) {
+		case 0: return "bg-red-100 text-red-700";
+		case 1: return "bg-orange-100 text-orange-700";
+		case 2: return "bg-indigo-100 text-indigo-700";
+		case 3: return "bg-emerald-100 text-emerald-700";
+		default: return "bg-gray-100 text-gray-600";
+	}
+};
+
 export const getDesistencia = (flag: boolean) => flag ? "Sim" : "Não";
 
 export const getFlagDesistenciaCor = (flag: boolean) =>
@@ -59,7 +69,7 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			}
 		},
 		{
-			label: "Taxa de Engajamento",
+			label: "Índice de Interação Avaliativa",
 			name: "flagEngajamento",
 			cell: (row: AlunoType) => (
 				<div className={`py-1 rounded-md text-xs font-medium border-[1.5px] ${getFlagCor(row.flagEngajamento)}`}>
@@ -127,7 +137,7 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			}
 		},
 		{
-			label: "Motivação",
+			label: "Índice de Interação Não Avaliativa",
 			name: "flagMotivacao",
 			cell: (row: AlunoType) => (
 				<div className={`py-1 rounded-md text-xs font-medium border-[1.5px] ${getFlagCor(row.flagMotivacao)}`}>
@@ -146,6 +156,40 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 		{
 			label: "Nº de Interações na Última Semana",
 			name: "nInter"
+		},
+		detalhesColumn
+	];
+
+	const profCognitivaColumns = [
+		{
+			label: "Aluno",
+			name: "nome",
+			options: {
+				sticky: true,
+				headerClassName: "min-w-96",
+				cellClassName: "font-medium text-left"
+			}
+		},
+		{
+			label: "Nível Médio de Profundidade Cognitiva",
+			name: "flagProfCog",
+			cell: (row: AlunoType) => (
+				<div className={`py-1 rounded-md text-xs font-medium border-[1.5px] ${getProfCogCor(row.flagProfCog)}`}>
+					{row.flagProfCog}
+				</div>
+			)
+		},
+		{
+			label: "Nível Médio de Profundidade Cognitiva em Fóruns",
+			name: "profCogForuns"
+		},
+		{
+			label: "Nível Médio de Profundidade Cognitiva em Quizzes",
+			name: "profCogQuizzes"
+		},
+		{
+			label: "Nível Médio de Profundidade Cognitiva em Tarefas",
+			name: "profCogTarefas"
 		},
 		detalhesColumn
 	];
@@ -195,7 +239,7 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			}
 		},
 		{
-			label: "Taxa de Desistência",
+			label: "Índice de Desistência",
 			name: "flagDesistencia",
 			cell: (row: AlunoType) => (
 				<div className={`py-1 rounded-md text-xs font-medium border-[1.5px] ${getFlagDesistenciaCor(row.flagDesistencia)}`}>
@@ -204,42 +248,36 @@ export const getColumns = (activeTab: string, cursoSelecionado: string | null) =
 			)
 		},
 		{
-			label: "Nível de Engajamento",
+			label: "Índice de Interação Avaliativa",
 			name: "flagEngajamento"
 		},
-				{
+		{
+			label: "Índice de Interação Não Avaliativa",
+			name: "flagMotivacao"
+		},
+		{
 			label: "Nível de Desempenho",
 			name: "flagDesempenho"
 		},
-				{
-			label: "Nível de Motivação",
-			name: "flagMotivacao"
-		},
-				{
+		{
 			label: "Nível de Relação Aluno-Professor",
 			name: "flagRelAlunoProf"
 		},
-		{
-			label: "Detalhes",
-			name: "detalhes",
-			cell: (row: AlunoType) => (
-				<Link href={`/Aluno/${row.id}`} className="cursor-pointer flex items-center justify-center w-full">
-					{row.detalhes}
-				</Link>
-			)
-		}
+		detalhesColumn
 	];
 
 	switch (activeTab) {
-		case "Engajamento":
+		case "Índice de Interação Avaliativa":
 			return engajamentoColumns;
 		case "Desempenho":
 			return desempenhoColumns;
-		case "Motivação":
+		case "Índice de Interação Não Avaliativa":
 			return motivacaoColumns;
+		case "Profundidade Cognitiva":
+			return profCognitivaColumns;
 		case "Relação Aluno-Professor":
 			return relacaoAlunoProfColumns;
-		case "Desistência":
+		case "Índice de Desistência":
 			return desistenciaColumns;
 		default:
 			return engajamentoColumns;

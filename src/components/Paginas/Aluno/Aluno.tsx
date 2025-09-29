@@ -1,6 +1,9 @@
 import * as React from "react";
 import { AlunoType } from "@/types/aluno";
 import Indicators from "./Indicator/Indicators";
+import { GaugeChart } from "./GaugeChart/GaugeChart";
+import AtividadesChart from "./AtividadesChart/AtividadesChart";
+
 
 interface CursoType {
   id: string;
@@ -102,6 +105,24 @@ export default function Aluno({ cursos, cursoSelecionado, alunos, alunoSeleciona
 
             <Indicators aluno={aluno} cursoSelecionado={cursoSelecionado} />
 
+            <div className="flex gap-4 mb-8 justify-between">
+              <div className="Box4 flex-1 p-6">
+                <h1 className="text-xl font-poppins font-semibold text-left">
+                  Nota final
+                </h1>
+                <p className="text-[#9291A5] mb-6 pb-4 border-b border-gray-200">da disciplina</p>
+                <div className="p-2"><GaugeChart /></div>
+              </div>
+
+              <div className="Box4 flex-1 p-6">
+                <h1 className="text-xl font-poppins font-semibold text-left">
+                  Notas
+                </h1>
+                <p className="text-[#9291A5] mb-6 pb-4 border-b border-gray-200">da disciplina</p>
+                <div className="p-5">
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>

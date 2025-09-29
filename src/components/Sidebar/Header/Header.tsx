@@ -40,7 +40,7 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
     <header className="header">
       <div className="componentsheader space-x-2">
         <Link href="/" className={getLinkClass('/')}>Home</Link>
-        <Link href="/Curso" className={getLinkClass('/Curso')}>Curso</Link>
+        <Link href="/Curso" className={getLinkClass('/Curso')}>Disciplina</Link>
         <Link href="/Alunos" className={getLinkClass('/Alunos')}>Alunos</Link>
 
         <select
@@ -52,7 +52,7 @@ export default function Header({ cursos, onCursoChange }: HeaderProps) {
           required
         >
           <option value="" disabled hidden>
-            Escolha o curso
+            Escolha a disciplina
           </option>
           {cursos.map((curso) => (
             <option key={curso.id} value={curso.id}>
